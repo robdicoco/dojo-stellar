@@ -1,37 +1,40 @@
 <template>
-  <header>
-    <img alt="Lumen logo" class="logo" src="@/assets/logolumen.png" width="125" height="125" />
-  </header>
-
   <div id="app">
-    <BlockSearch />
-    <TransactionSearch />
-    <BalanceSearch />
+    <Header />
+    <SearchBar @search="handleSearch" />
+    <MainTitle />
+    <StatisticsCards />
+    <BlockchainData />
+    <Charts />
+    <LatestLedgers />
+    <!-- Other components go here -->
   </div>
 </template>
 
 <script>
-import BlockSearch from './components/BlockSearch.vue';
-import TransactionSearch from './components/TransactionSearch.vue';
-import BalanceSearch from './components/BalanceSearch.vue';
+import Header from './components/Header.vue'
+import SearchBar from './components/SearchBar.vue'
+import MainTitle from './components/MainTitle.vue'
+import StatisticsCards from './components/StatisticsCards.vue'
+import BlockchainData from './components/BlockchainData.vue'
+import Charts from './components/Charts.vue'
+import LatestLedgers from './components/LatestLedgers.vue'
 
 export default {
-  name: 'App',
   components: {
-    BlockSearch,
-    TransactionSearch,
-    BalanceSearch,
+    Header,
+    SearchBar,
+    MainTitle,
+    StatisticsCards,
+    BlockchainData,
+    Charts,
+    LatestLedgers,
   },
-};
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  methods: {
+    handleSearch(query) {
+      console.log('User searched for:', query)
+      // Implement your search logic here
+    },
+  },
 }
-</style>
+</script>

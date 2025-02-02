@@ -10,24 +10,26 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from 'axios'
 
 export default {
   data() {
     return {
       transactionHash: '',
       transaction: null,
-    };
+    }
   },
   methods: {
     async searchTransaction() {
       try {
-        const response = await axios.get(`http://localhost:8000/transaction/${this.transactionHash}`);
-        this.transaction = response.data;
+        const response = await axios.get(
+          `http://localhost:8000/transaction/${this.transactionHash}`,
+        )
+        this.transaction = response.data
       } catch (error) {
-        alert('Transaction not found');
+        alert('Transaction not found')
       }
     },
   },
-};
+}
 </script>
