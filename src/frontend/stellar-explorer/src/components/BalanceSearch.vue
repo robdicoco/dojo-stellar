@@ -10,24 +10,24 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from 'axios'
 
 export default {
   data() {
     return {
       address: '',
       balance: null,
-    };
+    }
   },
   methods: {
     async searchBalance() {
       try {
-        const response = await axios.get(`http://localhost:8000/balance/${this.address}`);
-        this.balance = response.data;
+        const response = await axios.get(`http://localhost:8000/balance/${this.address}`)
+        this.balance = response.data
       } catch (error) {
-        alert('Address not found');
+        alert('Address not found')
       }
     },
   },
-};
+}
 </script>

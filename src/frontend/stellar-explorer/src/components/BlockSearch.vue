@@ -10,24 +10,24 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from 'axios'
 
 export default {
   data() {
     return {
       blockNumber: '',
       block: null,
-    };
+    }
   },
   methods: {
     async searchBlock() {
       try {
-        const response = await axios.get(`http://localhost:8000/block/${this.blockNumber}`);
-        this.block = response.data;
+        const response = await axios.get(`http://localhost:8000/block/${this.blockNumber}`)
+        this.block = response.data
       } catch (error) {
-        alert('Block not found');
+        alert('Block not found')
       }
     },
   },
-};
+}
 </script>
