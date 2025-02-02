@@ -3,7 +3,7 @@
     <!-- Left Section: Logo and Navigation Links -->
     <div class="header-left">
       <div class="logo">
-        <span>Stellar Lumen League | Explorer</span>
+        <span>Lumen League | Explorer</span>
       </div>
       <nav class="navigation">
         <ul>
@@ -51,15 +51,9 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1e1e1e; /* Dark theme background */
-  color: #ffffff; /* Text color */
+  background-color: #1e1e1e;
+  color: #ffffff;
   padding: 10px 20px;
-}
-
-/* Left Section: Logo and Navigation */
-.header-left {
-  display: flex;
-  align-items: center;
 }
 
 .logo {
@@ -69,10 +63,10 @@ export default {
 }
 
 .navigation ul {
-  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
 }
 
 .navigation li {
@@ -86,15 +80,32 @@ export default {
   transition: color 0.3s ease;
 }
 
+.network-selector select {
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Left Section: Logo and Navigation */
+/* .header-left { */
+/* display: flex; */
+/* align-items: center; */
+/* } */
+
 .navigation a:hover {
-  color: #00bcd4; /* Highlight color on hover */
+  color: #00bcd4;
 }
 
 /* Right Section: Icons and Network Selector */
-.header-right {
-  display: flex;
-  align-items: center;
-}
+/* .header-right { */
+/* display: flex; */
+/* align-items: center; */
+/* } */
 
 .favorites-btn,
 .settings-btn {
@@ -110,17 +121,6 @@ export default {
 .favorites-btn:hover,
 .settings-btn:hover {
   color: #00bcd4; /* Highlight color on hover */
-}
-
-.network-selector select {
-  background-color: #333333;
-  color: #ffffff;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  cursor: pointer;
-  outline: none;
 }
 
 .network-selector select:focus {

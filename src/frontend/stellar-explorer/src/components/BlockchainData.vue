@@ -56,7 +56,7 @@ export default {
 
 /* Column Styles */
 .column {
-  width: 48%; /* Two columns with spacing between them */
+  width: 48%;
 }
 
 .left-column {
@@ -73,24 +73,24 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
-  border-bottom: 1px solid #333; /* Separator line */
+  border-bottom: 1px solid #333;
 }
 
 .metric:last-child {
-  border-bottom: none; /* Remove border from the last metric */
+  border-bottom: none;
 }
 
 /* Label and Value Styles */
 .label {
   font-size: 14px;
-  color: #aaa; /* Light gray for labels */
+  color: #aaa;
   text-transform: uppercase;
 }
 
 .value {
   font-size: 16px;
   font-weight: bold;
-  color: #ffffff; /* White for values */
+  color: #ffffff;
 }
 
 /* Responsive Design */

@@ -53,12 +53,10 @@ export default {
 </script>
 
 <style scoped>
-/* General Latest Ledgers Styles */
 .latest-ledgers {
   margin: 20px 0;
 }
 
-/* Table Styles */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -82,7 +80,6 @@ td {
   color: #ffffff;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   table {
     font-size: 14px;

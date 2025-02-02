@@ -27,37 +27,34 @@ export default {
 </script>
 
 <style scoped>
-/* General Search Bar Styles */
 .search-bar {
   display: flex;
   align-items: center;
-  background-color: #222; /* Dark theme background */
+  background-color: #222;
   border-radius: 20px;
   padding: 5px 15px;
   width: 100%;
-  max-width: 600px; /* Limit the width for better UI */
-  margin: 20px auto; /* Center the search bar */
+  max-width: 600px;
+  margin: 20px auto;
 }
 
-/* Icon Styles */
 .icon {
-  color: #aaa; /* Light gray color for the icon */
+  color: #aaa;
   font-size: 18px;
   margin-right: 10px;
 }
 
-/* Input Field Styles */
 input {
   background: none;
   border: none;
-  color: #ffffff; /* White text color */
+  color: #ffffff;
   font-size: 14px;
   width: 100%;
   outline: none;
 }
 
 input::placeholder {
-  color: #aaa; /* Light gray placeholder text */
+  color: #aaa;
 }
 
 /* Hover and Focus Effects */

@@ -10,8 +10,8 @@ export default {
   name: 'MainTitle',
   data() {
     return {
-      title: 'StellarChain | Explorer', // Main title
-      subtitle: 'StellarChain Explorer: Your Stellar Blockchain Discovery Tool', // Subtitle
+      title: 'StellarChain | Lumen Explorer', // Main title
+      subtitle: 'StellarChain Explorer: Your Lumen Blockchain Discovery Tool', // Subtitle
     }
   },
 }

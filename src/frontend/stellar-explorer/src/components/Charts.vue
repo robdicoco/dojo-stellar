@@ -174,14 +174,6 @@ export default {
   width: calc(33% - 20px); /* Three charts per row with spacing */
   margin-bottom: 20px;
 }
-
-@media (max-width: 768px) {
-  .chart-container {
-    width: 100%; /* One chart per row on medium screens */
-    margin-bottom: 20px;
-  }
-}
-
 /* Chart Title and Tabs */
 h2 {
   font-size: 24px;
@@ -207,5 +199,12 @@ h2 {
 .time-period-tabs button.active {
   background-color: #00bcd4;
   color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .chart-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 </style>
