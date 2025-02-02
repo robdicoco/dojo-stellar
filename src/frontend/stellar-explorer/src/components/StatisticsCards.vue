@@ -59,32 +59,29 @@ export default {
 </script>
 
 <style scoped>
-/* General Statistics Cards Styles */
 .statistics-cards {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  flex-wrap: wrap;
   margin: 20px 0;
 }
 
-/* Individual Card Styles */
 .card {
   display: flex;
   align-items: center;
-  background-color: #222; /* Dark theme background */
+  background-color: #222;
   padding: 15px;
   border-radius: 10px;
-  width: calc(25% - 20px); /* Four cards per row with spacing */
+  width: calc(25% - 20px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px); /* Slight hover effect */
+  transform: translateY(-5px);
 }
 
-/* Icon Styles */
 .icon {
   background-color: #333;
   color: #ffffff;
@@ -94,7 +91,6 @@ export default {
   margin-right: 15px;
 }
 
-/* Data Section Styles */
 .data {
   flex-grow: 1;
 }
@@ -112,7 +108,6 @@ export default {
   color: #aaa;
 }
 
-/* Percentage Indicator Styles */
 .percentage {
   font-size: 14px;
   font-weight: bold;
@@ -121,30 +116,29 @@ export default {
 }
 
 .positive {
-  color: #4caf50; /* Green for positive percentages */
+  color: #4caf50;
   background-color: rgba(76, 175, 80, 0.2);
 }
 
 .negative {
-  color: #f44336; /* Red for negative percentages */
+  color: #f44336;
   background-color: rgba(244, 67, 54, 0.2);
 }
 
 .neutral {
-  color: #aaa; /* Gray for neutral percentages */
+  color: #aaa;
   background-color: rgba(170, 170, 170, 0.2);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .card {
-    width: calc(50% - 20px); /* Two cards per row on medium screens */
+    width: calc(50% - 20px);
   }
 }
 
 @media (max-width: 480px) {
   .card {
-    width: 100%; /* One card per row on small screens */
+    width: 100%;
   }
 }
 </style>

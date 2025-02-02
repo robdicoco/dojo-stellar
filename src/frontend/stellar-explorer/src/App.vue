@@ -7,7 +7,6 @@
     <BlockchainData />
     <Charts />
     <LatestLedgers />
-    <!-- Other components go here -->
   </div>
 </template>
 
@@ -38,3 +37,20 @@ export default {
   },
 }
 </script>
+
+<style>
+/* Add Font Awesome CDN link */
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'); */
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #ffffff;
+  background-color: #1e1e1e;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+</style>
