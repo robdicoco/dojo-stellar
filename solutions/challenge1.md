@@ -1,125 +1,146 @@
-# Dojo Stellar - Lumen League team
+[![🇧🇷 Português](https://img.shields.io/badge/Lang-PT--BR-green)](./challenge1.md)
+[![🇺🇸 English](https://img.shields.io/badge/Lang-EN-blue)](./challenge1-en.md)
 
-<img src="logo_lumen.png" alt="Lumen League logo" width="200">
+[← Voltar para o README](../README.md)
 
-## Challenge 1
 
--   Create Stellar node on any Cloud
+# Dojo Stellar - Equipe Lumen League ✨
 
--   Create an Explorer that connects to the local node of stellar, it
-    must:
-    -   Search for a block by number
-    -   Search for a transaction by hash
-    -   Search for the balance by address
+<p align="center">
+  <img src="./logo_lumen.png" alt="Logo da Lumen League" width="200">
+</p>
 
-## Solution: Stellar node on Cloud
 
-<a href="https://medium.com/@pavusa/create-your-local-stellar-node-a-step-by-step-guide-to-joining-the-stellar-network-179b80b26898" target="_blank">Create Your Local Stellar Node: A Step-by-Step Guide to Joining the Stellar Network!
-<br />
-<img src="Local Stellar Node.png" alt="Local Stellar Node Article" width="300"></a>
+## 🔥 Desafio 1
 
-## Solution: Explorer that connects to the local node of stellar
+- **Criar um nó Stellar** em qualquer provedor de Cloud.
 
-### Prerequisites
+- **Desenvolver um Explorador** que se conecte ao nó local da Stellar, que deve:
+  - 🔎 Buscar um bloco pelo número.
+  - 🔍 Buscar uma transação pelo hash.
+  - 💰 Buscar o saldo de uma conta pelo endereço.
 
-1.  **Stellar SDK**: You'll need the Stellar SDK for Python (`stellar-sdk`) for the backend and JavaScript (`stellar-sdk`) for the frontend.
-2.  **FastAPI**: For the backend API.
-3.  **Vue.js**: For the frontend.
-4.  **Node.js**: For running the Vue.js application.
-5.  **Python**: For running the FastAPI server.
+## ☁️ Solução: Nó Stellar na Cloud
 
-### Backend (FastAPI)
+<p align="justify">
+  Para configurar um nó Stellar local na Cloud, recomendamos seguir o guia abaixo. Este tutorial passo a passo mostrará como ingressar na rede Stellar, garantindo que seu nó esteja configurado e pronto para uso.
+</p>
 
-#### Dependencies
+<p align="center">
+  <a href="https://medium.com/@pavusa/create-your-local-stellar-node-a-step-by-step-guide-to-joining-the-stellar-network-179b80b26898" target="_blank">
+    <strong>Crie seu Nó Stellar Local: Um Guia Passo a Passo para Entrar na Rede Stellar!</strong>
+  </a>
+</p>
 
--   fastapi
--   uvicorn
--   stellar-sdk
+<p align="center">
+  <a href="https://medium.com/@pavusa/create-your-local-stellar-node-a-step-by-step-guide-to-joining-the-stellar-network-179b80b26898" target="_blank">
+    <img src="./logo_new.png" alt="Artigo sobre Nó Stellar Local" width="300">
+  </a>
+</p>
 
-### Frontend (Vue.js)
+## 🚀 Solução: Explorador Conectado ao Nó Local da Stellar
 
-#### Dependencies
+Esta solução está dividida em duas partes: o **Backend (API)** e o **Frontend (Interface do Usuário)**.
 
--   axios
+### 🔧 Pré-requisitos
 
-#### Design of the layout:
+1. **Stellar SDK**  
+   - **Backend:** Utilize o pacote `stellar-sdk` para Python.  
+   - **Frontend:** Utilize o pacote `stellar-sdk` para JavaScript.
+2. **FastAPI:** Framework para construir a API do backend.
+3. **Vue.js:** Framework JavaScript para criação da interface do usuário.
+4. **Node.js:** Necessário para executar a aplicação Vue.js.
+5. **Python:** Necessário para rodar o servidor FastAPI.
 
--   **Header:** Include logo, navigation links, favorites/network selection/settings icons.
--   **Search Bar:** Implement a search input field with placeholder text.
--   **Main Title and Subtitle:** Display the title and subtitle centrally.
--   **Statistics Cards:** Create cards to show rank, price, market cap, and 24h volume.
--   **Blockchain Data Section:** Two columns for various blockchain metrics.
--   **Charts:** Use a charting library to display historical data.
--   **Latest Ledgers:** A table or list showing recent ledger information.
+---
 
-**The Header Component**
+### ⚙️ Backend (FastAPI)
 
--   Create a `<Header>` component that includes the logo, navigation links, and icons for favorites, network selection, and settings.
--   Use Vue Router for navigation links.
+#### Dependências
 
-**Search Bar Component**
+- `fastapi`
+- `uvicorn`
+- `stellar-sdk`
 
--   Create a `<SearchBar>` component with an input field and a magnifying glass icon.
--   Add placeholder text for search suggestions.
+O backend é responsável por:
 
-**Main Title and Subtitle Components**
+- Conectar-se ao nó local da Stellar.
+- Executar buscas por blocos, transações e saldos.
+- Expor as informações obtidas via API.
 
--   Display "StellarChain | Explorer" as the main title.
--   Add "StellarChain Explorer: Your Stellar Blockchain Discovery Tool" as the subtitle.
+---
 
-**Statistics Cards**
+### 💻 Frontend (Vue.js)
 
--   Create a `<StatisticsCard>` component.
--   Use it multiple times with different icons, titles, and values.
--   Include a percentage change indicator.
+#### Dependências
 
-**Blockchain Data Section**
+- `axios` – para realizar chamadas à API do backend.
 
--   Divide it into two columns using Flexbox or Grid.
--   Populate each metric with simulated data.
+### 🏗️ Estrutura do Layout:
 
-**Implement Charts**
+- **Cabeçalho (Header):** Inclui o logotipo, links de navegação e ícones para favoritos, seleção de rede e configurações.
+- **Barra de Pesquisa (Search Bar):** Campo de entrada para pesquisa com texto de placeholder.
+- **Título Principal e Subtítulo:** Exibição centralizada do título e subtítulo.
+- **Cartões de Estatísticas:** Cards para exibir informações como ranking, preço, capitalização de mercado e volume de 24h.
+- **Seção de Dados da Blockchain:** Duas colunas apresentando métricas variadas da blockchain.
+- **Gráficos:** Exibição de dados históricos usando uma biblioteca de gráficos.
+- **Últimos Ledgers:** Tabela ou lista exibindo informações dos ledgers mais recentes.
 
--   Choose a charting library, e.g., VueChartjs.
--   Create separate components for each chart: Price, Operations, Transactions.
--   Simulate data for the charts or fetch real data from an API.
--   Add tabs for different time periods (1D, 1W, 1M, 1Y).
+### 🔨 Implementação dos Componentes:
 
-**Create the Latest Ledgers Section**
+#### **Componente Header**
+- Criar um componente `<Header>` contendo o logotipo, links de navegação e ícones de favoritos, seleção de rede e configurações.
+- Utilizar Vue Router para os links de navegação.
 
--   Use a table or list component to display recent ledger data.
--   Simulate the data or fetch it from an API.
+#### **Componente Search Bar**
+- Criar um componente `<SearchBar>` com um campo de entrada e um ícone de lupa.
+- Adicionar um placeholder para sugestões de pesquisa.
 
-### Components structure:
+#### **Componente Main Title e Subtitle**
+- Exibir `"StellarChain | Explorer"` como título principal.
+- Exibir `"StellarChain Explorer: Seu Explorador da Blockchain Stellar"` como subtítulo.
 
--   **App.vue:**
+#### **Componente Statistics Cards**
+- Criar um componente `<StatisticsCard>`.
+- Reutilizar o componente múltiplas vezes para exibir diferentes ícones, títulos e valores.
+- Incluir um indicador de variação percentual.
 
-    -   Contains the main layout, including `<Header>`, `<SearchBar>`, `<MainTitle>`, `<StatisticsCards>`, `<BlockchainData>`, `<Charts>`, and `<LatestLedgers>` components.
+#### **Seção de Dados da Blockchain**
+- Dividir em duas colunas utilizando Flexbox ou Grid.
+- Popular cada métrica com dados simulados.
 
--   **Header.vue:**
+#### **Implementação dos Gráficos**
+- Escolher uma biblioteca de gráficos, como `VueChartjs`.
+- Criar componentes específicos para cada gráfico: Preço, Operações, Transações.
+- Simular dados ou buscar informações reais de uma API.
+- Incluir abas para diferentes períodos de tempo (1D, 1S, 1M, 1A).
 
-    -   Includes logo, navigation links, and icons.
+#### **Seção Últimos Ledgers**
+- Utilizar uma tabela ou lista para exibir os dados dos ledgers recentes.
+- Simular os dados ou buscar informações de uma API.
 
--   **SearchBar.vue:**
+### 🧩 Estrutura dos Componentes:
 
-    -   Input field with placeholder text.
+- **App.vue:**  
+    - Contém o layout principal, incluindo os componentes `<Header>`, `<SearchBar>`, `<MainTitle>`, `<StatisticsCards>`, `<BlockchainData>`, `<Charts>` e `<LatestLedgers>`.
 
--   **MainTitle.vue:**
+- **Header.vue:**  
+    - Inclui o logotipo, links de navegação e ícones.
 
-    -   Displays title and subtitle.
+- **SearchBar.vue:**  
+    - Campo de entrada com placeholder.
 
--   **StatisticsCards.vue:**
+- **MainTitle.vue:**  
+    - Exibe o título e o subtítulo.
 
-    -   Multiple cards for rank, price, market cap, and 24h volume.
+- **StatisticsCards.vue:**  
+    - Cards para exibição de ranking, preço, capitalização de mercado e volume de 24h.
 
--   **BlockchainData.vue:**
+- **BlockchainData.vue:**  
+    - Exibição de métricas da blockchain organizadas em duas colunas.
 
-    -   Two columns for blockchain metrics.
+- **Charts.vue:**  
+    - Componentes para exibição de gráficos: Preço, Operações e Transações.
 
--   **Charts.vue:**
-
-    -   Components for PriceChart, OperationsChart, TransactionsChart.
-
--   **LatestLedgers.vue:**
-
-    -   Table or list showing recent ledgers.
+- **LatestLedgers.vue:**  
+    - Tabela ou lista para exibição dos ledgers mais recentes.
