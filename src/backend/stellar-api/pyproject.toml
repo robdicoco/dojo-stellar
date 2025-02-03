@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "fastapi>=0.115.8",
+    "slowapi>=0.1.9",
     "stellar-sdk>=12.1.0",
     "uvicorn>=0.34.0",
 ]
