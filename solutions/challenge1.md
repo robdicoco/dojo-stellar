@@ -1,6 +1,6 @@
 # Dojo Stellar - Lumen League team
 
-<img src="logo2.png" alt="Lumen League logo" width="200">
+<img src="logo_lumen.png" alt="Lumen League logo" width="200">
 
 ## Challenge 1
 
