@@ -2,7 +2,8 @@
   <div id="app">
     <Header />
     <SearchBar @search="handleSearch" />
-    <div id="results"></div>
+    <Results :result="result" />
+    <!-- <div id="results"></div> -->
     <MainTitle />
     <StatisticsCards />
     <BlockchainData />
@@ -19,6 +20,7 @@ import StatisticsCards from './components/StatisticsCards.vue'
 import BlockchainData from './components/BlockchainData.vue'
 import Charts from './components/Charts.vue'
 import LatestLedgers from './components/LatestLedgers.vue'
+import Results from './components/Results.vue'
 
 export default {
   components: {
@@ -29,6 +31,12 @@ export default {
     BlockchainData,
     Charts,
     LatestLedgers,
+    Results,
+  },
+  data() {
+    return {
+      result: null,
+    }
   },
   methods: {
     async handleSearch(query) {
@@ -55,44 +63,15 @@ export default {
           body: JSON.stringify(data),
         })
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`)
-        }
-
         const result = await response.json()
-        this.displayResults(result)
+        this.result = result
+
+        // if (!response.ok) {
+        //   throw new Error(`HTTP error! status: ${response.status}`)
+        // }
       } catch (error) {
         console.error('Error:', error)
-        this.displayResults({ detail: 'An error occurred while fetching the data.' })
-      }
-    },
-
-    displayResults(result) {
-      const resultsDiv = document.getElementById('results')
-      resultsDiv.innerHTML = ''
-
-      if (result.detail) {
-        resultsDiv.innerHTML = `<p>Error: ${result.detail}</p>`
-        return
-      }
-
-      if (result.result === 'ledger_info') {
-        resultsDiv.innerHTML = `
-                    <h2>Ledger Information</h2>
-                    <pre>${JSON.stringify(result.data, null, 2)}</pre>
-                `
-      } else if (result.result === 'transaction_info') {
-        resultsDiv.innerHTML = `
-                    <h2>Transaction Information</h2>
-                    <pre>${JSON.stringify(result.data, null, 2)}</pre>
-                `
-      } else if (result.result === 'account_info') {
-        resultsDiv.innerHTML = `
-                    <h2>Account Information</h2>
-                    <pre>${JSON.stringify(result.data, null, 2)}</pre>
-                `
-      } else {
-        resultsDiv.innerHTML = '<p>No results found.</p>'
+        this.result = { detail: 'An error occurred while fetching the data.' }
       }
     },
   },
