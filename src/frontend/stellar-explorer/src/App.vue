@@ -2,6 +2,7 @@
   <div id="app">
     <Header />
     <SearchBar @search="handleSearch" />
+    <div id="results"></div>
     <MainTitle />
     <StatisticsCards />
     <BlockchainData />
@@ -30,9 +31,69 @@ export default {
     LatestLedgers,
   },
   methods: {
-    handleSearch(query) {
+    async handleSearch(query) {
       console.log('User searched for:', query)
-      // Implement your search logic here
+      this.performSearch(query)
+    },
+
+    async performSearch(query) {
+      // const query = document.getElementById('searchQuery').value
+      if (!query) {
+        alert('Please enter a query.')
+        return
+      }
+
+      const apiUrl = 'api/search'
+      const data = { query }
+
+      try {
+        const response = await fetch(apiUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        })
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+
+        const result = await response.json()
+        this.displayResults(result)
+      } catch (error) {
+        console.error('Error:', error)
+        this.displayResults({ detail: 'An error occurred while fetching the data.' })
+      }
+    },
+
+    displayResults(result) {
+      const resultsDiv = document.getElementById('results')
+      resultsDiv.innerHTML = ''
+
+      if (result.detail) {
+        resultsDiv.innerHTML = `<p>Error: ${result.detail}</p>`
+        return
+      }
+
+      if (result.result === 'ledger_info') {
+        resultsDiv.innerHTML = `
+                    <h2>Ledger Information</h2>
+                    <pre>${JSON.stringify(result.data, null, 2)}</pre>
+                `
+      } else if (result.result === 'transaction_info') {
+        resultsDiv.innerHTML = `
+                    <h2>Transaction Information</h2>
+                    <pre>${JSON.stringify(result.data, null, 2)}</pre>
+                `
+      } else if (result.result === 'account_info') {
+        resultsDiv.innerHTML = `
+                    <h2>Account Information</h2>
+                    <pre>${JSON.stringify(result.data, null, 2)}</pre>
+                `
+      } else {
+        resultsDiv.innerHTML = '<p>No results found.</p>'
+      }
     },
   },
 }

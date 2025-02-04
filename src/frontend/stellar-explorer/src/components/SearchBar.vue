@@ -1,9 +1,14 @@
 <template>
   <div class="search-bar">
-    <div class="icon">
+    <div class="icon" @click="handleSearch">
       <i class="fas fa-search"></i>
     </div>
-    <input type="text" v-model="searchQuery" :placeholder="placeholderText" @input="handleSearch" />
+    <input
+      type="text"
+      v-model="searchQuery"
+      :placeholder="placeholderText"
+      @keyup.enter="handleSearch"
+    />
   </div>
 </template>
 
@@ -19,8 +24,10 @@ export default {
   },
   methods: {
     handleSearch() {
-      // Emit the search query to the parent component
-      this.$emit('search', this.searchQuery)
+      // Emit the search query to the parent component only if the query is not empty
+      if (this.searchQuery.trim()) {
+        this.$emit('search', this.searchQuery)
+      }
     },
   },
 }
