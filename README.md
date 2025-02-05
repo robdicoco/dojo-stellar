@@ -168,8 +168,8 @@ O **Dojo Stellar** é estruturado em quatro desafios progressivos, cada um focad
 
 | **Semana** | **Desafio** | **Descrição** | **Início** | **Entrega** | **Status** |
 |:---------:|:------------:|:-------------:|:----------:|:-----------:|:----------:|
-| 🟢 **Semana 1** | 🚀 **Explorador Blockchain** | Criar um explorador para visualizar transações, contas e contratos inteligentes na Stellar. | **30/01** | **05/02** | 🔄 *Em andamento* |
-| 🟡 **Semana 2** | 💰 **Carteira CLI** | Desenvolver uma carteira CLI para transações na Stellar. | **05/02** | **12/02** | ⏳ *Aguardando início* |
+| 🟢 **Semana 1** | 🚀 **Explorador Blockchain** | Criar um explorador para visualizar transações, contas e contratos inteligentes na Stellar. | **30/01** | **05/02** | 🎯 *Concluído* |
+| 🟡 **Semana 2** | 💰 **Carteira CLI** | Desenvolver uma carteira CLI para transações na Stellar. | **05/02** | **12/02** | 🔄 *Em andamento* |
 | 🔵 **Semana 3** | 🔮 **Oráculo Blockchain** | Criar um **oráculo descentralizado** para conectar a Stellar a fontes externas de dados confiáveis. | **12/02** | **19/02** | ⏳ *Aguardando início* |
 | 🟣 **Semana 4** | ⚡ **Exchange Descentralizada (DEX)** | Construir uma **DEX** para negociação de ativos digitais na Stellar. | **19/02** | **03/05** | ⏳ *Aguardando início* |
 
