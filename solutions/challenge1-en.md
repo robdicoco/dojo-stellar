@@ -6,7 +6,7 @@
 # Dojo Stellar - Lumen League Team ✨
 
 <p align="center">
-  <img src="./logo_lumen.png" alt="Lumen League Logo" width="200">
+  <img src="./letreiro_lumen_explorer-en.gif" alt="Lumen League Logo" width="1000">
 </p>
 
 ## 🔥 Challenge 1
