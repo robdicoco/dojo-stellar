@@ -4,7 +4,7 @@
 # Dojo Stellar - Lumen League Team
 
 <p align="center">
-  <img src="solutions/logo_lumen.png" alt="Lumen League logo" width="400">
+  <img src="solutions/letreiro_lumen.gif" alt="Lumen League logo" width="1000">
 </p>
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
@@ -102,15 +102,18 @@ O **Dojo Stellar** é estruturado em quatro desafios progressivos, cada um focad
 
 <div align="center">
   <a href="solutions/challenge1.md">
-    <img src="https://github.com/user-attachments/assets/3414bd2c-2da5-49cc-bcbb-84665d2492b8" alt="Blockchain Explorer" width="40%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="./solutions/print_explorer.png" alt="Blockchain Explorer" width="80%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
   </a>
 </div>
 
 **Início:** 30/01  
 **Entrega:** 05/02  
-[Detalhes do Desafio 1](./solutions/challenge1.md)
 
 **Objetivo:** Criar um explorador blockchain que permita visualizar transações, contas e contratos inteligentes na Stellar.
+
+[Detalhes do Desafio 1](./solutions/challenge1.md)
+
+[![Acessar Lumen League Explorer](https://img.shields.io/badge/Lumen%20Explorer-Acessar%20Agora-blue?style=for-the-badge&logo=stellar)](https://lumen.758206.xyz/)
 
 ---
 
@@ -118,7 +121,7 @@ O **Dojo Stellar** é estruturado em quatro desafios progressivos, cada um focad
 
 <div align="center">
   <a href="#">
-    <img src="https://github.com/user-attachments/assets/eab43826-6edd-4e3d-8927-241e7af77375" alt="CLI Wallet" width="40%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="https://github.com/user-attachments/assets/eab43826-6edd-4e3d-8927-241e7af77375" alt="CLI Wallet" width="80%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
   </a>
 </div>
 
@@ -133,7 +136,7 @@ O **Dojo Stellar** é estruturado em quatro desafios progressivos, cada um focad
 
 <div align="center">
   <a href="#">
-    <img src="https://github.com/user-attachments/assets/6e6c447b-51de-4630-a0aa-ee7c0b82f93f" alt="Oracle Blockchain" width="40%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="https://github.com/user-attachments/assets/6e6c447b-51de-4630-a0aa-ee7c0b82f93f" alt="Oracle Blockchain" width="80%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
   </a>
 </div>
 
@@ -148,7 +151,7 @@ O **Dojo Stellar** é estruturado em quatro desafios progressivos, cada um focad
 
 <div align="center">
   <a href="#">
-    <img src="https://github.com/user-attachments/assets/8d85277a-445a-49db-b29e-0d36fede5f20" alt="DEX" width="40%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="https://github.com/user-attachments/assets/8d85277a-445a-49db-b29e-0d36fede5f20" alt="DEX" width="80%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
   </a>
 </div>
 
