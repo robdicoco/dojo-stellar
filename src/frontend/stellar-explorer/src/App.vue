@@ -9,6 +9,7 @@
     <BlockchainData />
     <Charts />
     <LatestLedgers />
+    <Footer />
   </div>
 </template>
 
@@ -21,6 +22,7 @@ import BlockchainData from './components/BlockchainData.vue'
 import Charts from './components/Charts.vue'
 import LatestLedgers from './components/LatestLedgers.vue'
 import Results from './components/Results.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   components: {
@@ -32,6 +34,7 @@ export default {
     Charts,
     LatestLedgers,
     Results,
+    Footer,
   },
   data() {
     return {
@@ -87,8 +90,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #ffffff;
-  background-color: #1e1e1e;
+  background-color: var(--background-color);
+  color: var(--text-color);
   min-height: 100vh;
   padding: 20px;
   box-sizing: border-box;

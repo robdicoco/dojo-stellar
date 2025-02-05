@@ -109,7 +109,7 @@ export default {
 }
 
 .content {
-  background-color: #2e2e2e;
+  background-color: var(--background-color);
   padding: 10px;
   border-radius: 5px;
 }
@@ -136,6 +136,6 @@ td {
   padding: 8px;
 }
 th {
-  background-color: #302b2b;
+  background-color: var(--background-color);
 }
 </style>

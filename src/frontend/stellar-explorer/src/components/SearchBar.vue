@@ -37,7 +37,7 @@ export default {
 .search-bar {
   display: flex;
   align-items: center;
-  background-color: #222;
+  background-color: var(--background-color);
   border-radius: 20px;
   padding: 5px 15px;
   width: 100%;
@@ -52,16 +52,16 @@ export default {
 }
 
 input {
-  background: none;
+  background-color: var(--background-color);
+  color: var(--text-color);
   border: none;
-  color: #ffffff;
   font-size: 14px;
   width: 100%;
   outline: none;
 }
 
 input::placeholder {
-  color: #aaa;
+  color: var(--text-color);
 }
 
 /* Hover and Focus Effects */

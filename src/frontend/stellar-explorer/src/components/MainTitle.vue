@@ -1,4 +1,5 @@
 <template>
+  <img alt="Vue logo" class="logo" src="@/assets/logo_explorer.png" width="180" height="180" />
   <div class="main-title">
     <h1 class="title">{{ title }}</h1>
     <p class="subtitle">{{ subtitle }}</p>
@@ -28,7 +29,7 @@ export default {
 .title {
   font-size: 36px;
   font-weight: bold;
-  color: #ffffff; /* White text color */
+  color: var(--text-color);
   margin-bottom: 10px; /* Space between title and subtitle */
 }
 

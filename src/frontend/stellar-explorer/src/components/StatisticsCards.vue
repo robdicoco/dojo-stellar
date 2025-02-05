@@ -70,7 +70,7 @@ export default {
 .card {
   display: flex;
   align-items: center;
-  background-color: #222;
+  background-color: var(--background-color);
   padding: 15px;
   border-radius: 10px;
   width: calc(25% - 20px);
@@ -83,8 +83,8 @@ export default {
 }
 
 .icon {
-  background-color: #333;
-  color: #ffffff;
+  background-color: var(--background-color);
+  color: var(--text-color);
   padding: 10px;
   border-radius: 50%;
   font-size: 18px;
@@ -98,7 +98,7 @@ export default {
 .value {
   font-size: 18px;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--text-color);
   margin-bottom: 5px;
 }
 
