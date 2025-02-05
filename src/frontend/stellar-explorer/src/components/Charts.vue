@@ -177,7 +177,7 @@ export default {
 /* Chart Title and Tabs */
 h2 {
   font-size: 24px;
-  color: #ffffff;
+  color: var(--text-color);
   margin-bottom: 10px;
 }
 

@@ -90,7 +90,7 @@ export default {
 .value {
   font-size: 16px;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 /* Responsive Design */

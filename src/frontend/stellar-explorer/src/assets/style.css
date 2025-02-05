@@ -1,0 +1,19 @@
+/* Global Theme Variables */
+[data-theme='dark'] {
+  --background-color: #1e1e1e;
+  --text-color: #ffffff;
+  --primary-color: #00bcd4;
+}
+
+[data-theme='light'] {
+  --background-color: #faf2f2;
+  --text-color: #000000;
+  --primary-color: #007bff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Other global styles */

@@ -70,14 +70,14 @@ td {
 }
 
 th {
-  background-color: #222;
-  color: #aaa;
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-weight: bold;
 }
 
 td {
-  background-color: #1e1e1e;
-  color: #ffffff;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 @media (max-width: 768px) {
