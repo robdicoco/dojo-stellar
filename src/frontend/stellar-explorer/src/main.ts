@@ -20,7 +20,7 @@ app.use(router)
 app.mount('#app')
 
 // Watch for theme changes and save to local storage
-app.config.globalProperties.$watchTheme = (newTheme) => {
+app.config.globalProperties.$watchTheme = (newTheme: string) => {
   document.documentElement.setAttribute('data-theme', newTheme)
   localStorage.setItem('theme', newTheme)
 }
