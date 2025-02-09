@@ -1,0 +1,38 @@
+[package]
+name = "lumen-stellar-wallet-extension"
+version = "0.1.0"
+authors = ["robdicoco <pavusa@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = ["console_error_panic_hook"]
+
+[dependencies]
+# wasm-bindgen = "0.2.84"
+wasm-bindgen = "0.2"
+web-sys = { version = "0.3", features = ["Window", "Response", "Request", "RequestInit"] }
+reqwest = { version = "0.11", features = ["json", "blocking"] } # HTTP client for Stellar Horizon API
+serde = { version = "1.0", features = ["derive"] }  # Serialization/Deserialization
+serde_json = "1.0" # JSON handling
+aes = "0.7"  # AES encryption
+block-modes = "0.8"  # Block cipher modes (e.g., CFB)
+hex = "0.4"  # Hex encoding/decoding
+tokio = { version = "1", features = ["full"] }  # Async runtime
+getrandom = { version = "0.2", features = ["js"] }
+rand = { version = "0.8", features = ["getrandom"] } # Random number generation
+
+# The `console_error_panic_hook` crate provides better debugging of panics by
+# logging them with `console.error`. This is great for development, but requires
+# all the `std::fmt` and `std::panicking` infrastructure, so isn't great for
+# code size when deploying.
+console_error_panic_hook = { version = "0.1.7", optional = true }
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.34"
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"
