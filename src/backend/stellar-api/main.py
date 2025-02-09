@@ -23,42 +23,84 @@ class SearchInput(BaseModel):
 @app.get("/block/{sequence}")
 @limiter.limit("10/minute")
 async def get_block(request: Request, sequence: int):
+    # Validate the input
+    if sequence <= 0:
+        raise HTTPException(
+            status_code=400,
+            detail={
+                "error": f"Invalid ledger sequence {sequence}.",
+                "message": "Ledger sequence must be a positive integer.",
+            },
+        )
+
     try:
         # Fetch the requested ledger
         ledger = stellar_server.ledgers().ledger(sequence).call()
         return ledger
     except Exception as e:
-        # If the ledger is not found, fetch the earliest and latest ledgers to determine the valid range
-        try:
-            # Fetch the latest ledger
-            latest_ledger = stellar_server.ledgers().order(desc=True).limit(1).call()
-            latest_sequence = latest_ledger["_embedded"]["records"][0]["sequence"]
+        # Handle the case where the ledger is not found
+        error_message = str(e)
 
-            # Fetch the earliest ledger
-            earliest_ledger = stellar_server.ledgers().order(desc=False).limit(1).call()
-            earliest_sequence = earliest_ledger["_embedded"]["records"][0]["sequence"]
+        if (
+            "prior to the recorded history known" in error_message
+            or "invalid in some way" in error_message
+        ):
+            try:
+                # Fetch the latest ledger
+                latest_ledger = (
+                    stellar_server.ledgers().order(desc=True).limit(1).call()
+                )
+                latest_sequence = latest_ledger["_embedded"]["records"][0]["sequence"]
 
-            # Check if the requested sequence is below the earliest available ledger
-            if int(sequence) < int(earliest_sequence):
-                raise HTTPException(
-                    status_code=404,
-                    detail={
-                        "error": f"Ledger with sequence {sequence} not found.",
-                        "valid_range": f"Valid ledger sequence numbers are between {earliest_sequence} and {latest_sequence}.",
-                    },
+                # Fetch the earliest ledger
+                earliest_ledger = (
+                    stellar_server.ledgers().order(desc=False).limit(1).call()
                 )
-            else:
+                earliest_sequence = earliest_ledger["_embedded"]["records"][0][
+                    "sequence"
+                ]
+
+                # Check if the requested sequence is out of range
+                if int(sequence) < int(earliest_sequence):
+                    raise HTTPException(
+                        status_code=404,
+                        detail={
+                            "error": f"Ledger with sequence {sequence} not found.",
+                            "valid_range": f"Valid ledger sequence numbers are between {earliest_sequence} and {latest_sequence}.",
+                        },
+                    )
+                elif int(sequence) > int(latest_sequence):
+                    raise HTTPException(
+                        status_code=404,
+                        detail={
+                            "error": f"Ledger with sequence {sequence} not found.",
+                            "valid_range": f"Valid ledger sequence numbers are between {earliest_sequence} and {latest_sequence}.",
+                        },
+                    )
+                else:
+                    # This should never happen unless there's a gap in the ledger history
+                    raise HTTPException(
+                        status_code=404,
+                        detail={
+                            "error": f"Ledger with sequence {sequence} not found.",
+                            "valid_range": f"Valid ledger sequence numbers are between {earliest_sequence} and {latest_sequence}.",
+                        },
+                    )
+            except Exception as inner_e:
+                error_message2 = str(inner_e)
+                if "Ledger with sequence" in error_message2:
+                    raise inner_e
+
+                # Log the inner exception for debugging
+                print(f"Inner exception while fetching ledger range: {inner_e}")
                 raise HTTPException(
-                    status_code=404,
-                    detail={
-                        "error": f"Ledger with sequence {sequence} not found.",
-                        "valid_range": f"Valid ledger sequence numbers are between {earliest_sequence} and {latest_sequence}.",
-                    },
+                    status_code=500,
+                    detail=f"An unexpected error occurred while determining the valid ledger range",
                 )
-        except Exception as inner_e:
+        else:
+            # Handle other unexpected errors
             raise HTTPException(
-                status_code=500,
-                detail=str(inner_e),
+                status_code=500, detail=f"An unexpected error occurred: {str(e)}"
             )
 
 
@@ -85,9 +127,9 @@ async def get_balance(request: Request, address: str):
 
 @app.get("/account/{address}")
 @limiter.limit("10/minute")
-async def get_account_info(request: Request, account_address):
+async def get_account_info(request: Request, address: str):
     try:
-        account = stellar_server.accounts().account_id(account_address).call()
+        account = stellar_server.accounts().account_id(address).call()
         return account
     except Exception as e:
         raise HTTPException(
