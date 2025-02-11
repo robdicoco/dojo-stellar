@@ -17,3 +17,9 @@ tokio = { version = "1", features = ["full"] }
 base32 = "0.4"
 crc = "2.1"
 sha2 = "0.10"
+
+
+[dev-dependencies]
+mockito = "0.32"
+serial_test = "3.2.0"
+wiremock = "0.6.2"

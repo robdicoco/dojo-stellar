@@ -28,6 +28,16 @@ impl Keystore {
         }
     }
 
+    // Public getter for the number of keys
+    pub fn key_count(&self) -> usize {
+        self.keys.len()
+    }
+
+    // Public getter to retrieve all keys (optional, if needed)
+    pub fn get_keys(&self) -> &HashMap<String, String> {
+        &self.keys
+    }
+
     pub fn add_key(&mut self, public_key: String, secret_key: String) {
         self.keys.insert(public_key, secret_key);
     }
