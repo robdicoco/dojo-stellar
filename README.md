@@ -1,7 +1,7 @@
 [![🇧🇷 Português](https://img.shields.io/badge/Lang-PT--BR-green)](README.md)
 [![🇺🇸 English](https://img.shields.io/badge/Lang-EN-blue)](README-en.md)
 
-# Dojo Stellar - Lumen League Team
+# Dojo Stellar - Lumen League Team ✨
 
 <p align="center">
   <img src="solutions/letreiro_lumen.gif" alt="Lumen League logo" width="1000">
@@ -102,7 +102,7 @@ O **Dojo Stellar** é estruturado em quatro desafios progressivos, cada um focad
 
 <div align="center">
   <a href="solutions/challenge1.md">
-    <img src="./solutions/print_explorer.png" alt="Blockchain Explorer" width="80%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="./solutions/lumen_explorer.gif" alt="Blockchain Explorer" width="100%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
   </a>
 </div>
 
@@ -111,7 +111,9 @@ O **Dojo Stellar** é estruturado em quatro desafios progressivos, cada um focad
 
 **Objetivo:** Criar um explorador blockchain que permita visualizar transações, contas e contratos inteligentes na Stellar.
 
-[Detalhes do Desafio 1](./solutions/challenge1.md)
+
+[![Detalhes do Desafio 1](https://img.shields.io/badge/Desafio%201-Detalhes%20aqui-white?style=for-the-badge&logo=markdown)](./solutions/challenge1.md)
+
 
 [![Acessar Lumen League Explorer](https://img.shields.io/badge/Lumen%20Explorer-Acessar%20Agora-blue?style=for-the-badge&logo=stellar)](https://lumen.758206.xyz/)
 
@@ -129,6 +131,10 @@ O **Dojo Stellar** é estruturado em quatro desafios progressivos, cada um focad
 **Entrega:** 12/02  
 
 **Objetivo:** Desenvolver uma carteira de linha de comando (CLI) para realizar transações na Stellar de forma rápida e eficiente.
+
+[![Detalhes do Desafio 1](https://img.shields.io/badge/Desafio%201-Detalhes%20aqui-white?style=for-the-badge&logo=markdown)](./solutions/challenge2.md)
+
+[![Wallet CLI Stellar](https://img.shields.io/badge/Wallet%20CLI-Acessar%20Agora-FFD700?style=for-the-badge&logo=stellar)](https://crates.io/crates/stellar_cli_wallet_lumen)
 
 ---
 
@@ -182,5 +188,4 @@ O **Dojo Stellar** é estruturado em quatro desafios progressivos, cada um focad
 Este projeto está licenciado sob a **MIT License**. Para mais detalhes, consulte o arquivo [LICENSE](./LICENSE).
 
 ---
-
-📢 **Fique ligado!** Atualizações serão postadas conforme o progresso do **Dojo Stellar**. 🚀
+<p align="center">🌟 Desenvolvido durante o programa <strong>Dojo Stellar</strong></p>
