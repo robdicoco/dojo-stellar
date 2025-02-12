@@ -9,6 +9,11 @@
   <img src="./letreiro_lumen_explorer-en.gif" alt="Lumen League Logo" width="1000">
 </p>
 
+[![Status](https://img.shields.io/badge/Status-Concluded-green)](#)
+![Stellar](https://img.shields.io/badge/Stellar-Blockchain-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+
 ## 🔥 Challenge 1
 
 - **Deploy a Stellar Node** on any Cloud provider.
