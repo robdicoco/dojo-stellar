@@ -10,6 +10,16 @@ use serde::{Deserialize, Serialize};
 use sha2::{Digest, Sha256};
 use std::collections::HashMap; // Required for signing operations
 
+// use aes_gcm::aead::generic_array::GenericArray;
+// use aes_gcm::{
+//     aead::{Aead, OsRng},
+//     Aes256Gcm, KeyInit,
+// };
+// use bip39::{Language, Mnemonic, Seed};
+// use std::fs;
+// use std::io;
+// use std::path::Path;
+
 type Aes128Cbc = Cbc<Aes128, Pkcs7>;
 
 /// Stellar StrKey version bytes
@@ -20,6 +30,84 @@ const SECRET_KEY_VERSION_BYTE: u8 = 18 << 3; // 144 (0x90)
 pub struct Keystore {
     keys: HashMap<String, String>, // Public Key -> Secret Key
 }
+
+#[derive(Serialize, Deserialize)]
+pub struct Identity {
+    pub name: String,
+    pub seed_phrase: String,
+}
+
+// impl Identity {
+//     /// Generate a new identity with a seed phrase.
+//     ///
+//     /// # Arguments
+//     /// * `name` - Name of the identity.
+//     /// * `seed` - Optional seed to use when generating the seed phrase. If empty, a random seed is generated.
+//     ///
+//     /// # Returns
+//     /// A tuple containing the seed phrase and the derived Stellar keypair.
+//     pub fn generate(name: String, seed: Option<String>) -> (String, KeyPair) {
+//         let mnemonic = match seed {
+//             Some(seed) => Mnemonic::from_phrase(&seed, Language::English).unwrap(),
+//             None => Mnemonic::generate_in(Language::English, 24).unwrap(),
+//         };
+
+//         let seed_phrase = mnemonic.phrase();
+//         let seed_bytes = Seed::new(&mnemonic, "").as_bytes();
+//         let keypair = KeyPair::from_seed(&seed_bytes[..32]).unwrap();
+
+//         (seed_phrase.to_string(), keypair)
+//     }
+
+//     /// Save the identity to an encrypted file.
+//     ///
+//     /// # Arguments
+//     /// * `name` - Name of the identity.
+//     /// * `seed_phrase` - The seed phrase to save.
+//     /// * `password` - Password to encrypt the file.
+//     ///
+//     /// # Returns
+//     /// `io::Result<()>` indicating success or failure.
+//     pub fn save(&self, password: &str) -> io::Result<()> {
+//         let encrypted = encrypt(&serde_json::to_string(self).unwrap(), password);
+//         fs::write(format!("{}.identity", self.name), encrypted)?;
+//         Ok(())
+//     }
+
+//     /// Load an identity from an encrypted file.
+//     ///
+//     /// # Arguments
+//     /// * `name` - Name of the identity.
+//     /// * `password` - Password to decrypt the file.
+//     ///
+//     /// # Returns
+//     /// `io::Result<Identity>` containing the loaded identity.
+//     pub fn load(name: &str, password: &str) -> io::Result<Identity> {
+//         let encrypted = fs::read_to_string(format!("{}.identity", name))?;
+//         let decrypted = decrypt(&encrypted, password).unwrap();
+//         let identity: Identity = serde_json::from_str(&decrypted)?;
+//         Ok(identity)
+//     }
+// }
+
+// /// Encrypt data using AES-256-GCM.
+// fn encrypt(data: &str, password: &str) -> String {
+//     let key = GenericArray::from_slice(password.as_bytes());
+//     let cipher = Aes256Gcm::new(key);
+//     let nonce = Aes256Gcm::generate_nonce(&mut OsRng);
+//     let ciphertext = cipher.encrypt(&nonce, data.as_bytes()).unwrap();
+//     base64::encode(&[nonce.to_vec(), ciphertext].concat())
+// }
+
+// /// Decrypt data using AES-256-GCM.
+// fn decrypt(encrypted: &str, password: &str) -> Result<String, Box<dyn std::error::Error>> {
+//     let data = base64::decode(encrypted)?;
+//     let (nonce, ciphertext) = data.split_at(12);
+//     let key = GenericArray::from_slice(password.as_bytes());
+//     let cipher = Aes256Gcm::new(key);
+//     let plaintext = cipher.decrypt(GenericArray::from_slice(nonce), ciphertext)?;
+//     Ok(String::from_utf8(plaintext)?)
+// }
 
 impl Keystore {
     pub fn new() -> Self {
