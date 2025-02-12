@@ -1,6 +1,6 @@
 # Lumen Stellar CLI Wallet
 
-[![Crates.io](https://img.shields.io/crates/v/stellar_cli_wallet_lumen.svg)](https://crates.io/crates/stellar_cli_wallet) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://chat.qwenlm.ai/c/LICENSE)
+[![Crates.io](https://img.shields.io/crates/v/stellar_cli_wallet_lumen.svg)](https://crates.io/crates/stellar_cli_wallet_lumen) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://chat.qwenlm.ai/c/LICENSE)
 
 A command-line interface (CLI) tool for interacting with the Stellar network and Soroban RPC. This tool allows you to generate keypairs, fetch balances, send XLM, fund wallets, and manage keystores securely.
 
