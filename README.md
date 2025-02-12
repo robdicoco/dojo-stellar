@@ -122,8 +122,8 @@ O **Dojo Stellar** é estruturado em quatro desafios progressivos, cada um focad
 ### <a id="semana-2-carteira-cli"></a>📌 Semana 2: Criação de uma Carteira CLI
 
 <div align="center">
-  <a href="#">
-    <img src="https://github.com/user-attachments/assets/eab43826-6edd-4e3d-8927-241e7af77375" alt="CLI Wallet" width="80%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+  <a href="solutions/challenge2.md">
+    <img src="./solutions/lumen_wallet.gif" alt="CLI Wallet" width="100%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
   </a>
 </div>
 
