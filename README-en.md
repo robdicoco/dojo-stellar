@@ -1,7 +1,7 @@
 [![🇺🇸 English](https://img.shields.io/badge/Lang-EN-blue)](README-en.md)
 [![🇧🇷 Portuguese](https://img.shields.io/badge/Lang-PT--BR-green)](README.md)
 
-# Dojo Stellar - Lumen League Team
+# Dojo Stellar - Lumen League Team ✨
 
 <p align="center">
   <img src="./solutions/letreiro_lumen.gif" alt="Lumen League logo" width="1000">
@@ -102,7 +102,7 @@ The **Lumen League** team is composed of the following members:
 
 <div align="center">
   <a href="solutions/challenge1-en.md">
-    <img src="./solutions/print_explorer.png" alt="Blockchain Explorer" width="80%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="./solutions/lumen_explorer.gif" alt="Blockchain Explorer" width="100%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
   </a>
 </div>
 
@@ -111,10 +111,10 @@ The **Lumen League** team is composed of the following members:
 
 **Objective:** Create a blockchain explorer that allows users to view transactions, accounts, and smart contracts on the Stellar network.
 
-[Challenge 1 Details](./solutions/challenge1-en.md)
+[![Challenge 1 Details](https://img.shields.io/badge/Challenge%201-Details%20here-white?style=for-the-badge&logo=markdown)](./solutions/challenge1-en.md)
 
+[![Access Lumen League Explorer](https://img.shields.io/badge/Lumen%20Explorer-Access%20Now-blue?style=for-the-badge&logo=stellar)](https://lumen.758206.xyz/)
 
-[![Visit Lumen League Explorer](https://img.shields.io/badge/Lumen%20Explorer-Click%20Here-blue?style=for-the-badge&logo=stellar)](https://lumen.758206.xyz/)
 
 
 ---
@@ -131,6 +131,10 @@ The **Lumen League** team is composed of the following members:
 **Due Date:** 02/12  
 
 **Objective:** Develop a command-line interface (CLI) wallet to efficiently perform transactions on the Stellar network.
+
+[![Challenge 1 Details](https://img.shields.io/badge/Challenge%201-Details%20here-white?style=for-the-badge&logo=markdown)](./solutions/challenge2-en.md)
+
+[![Wallet CLI Stellar](https://img.shields.io/badge/Wallet%20CLI-Access%20Now-FFD700?style=for-the-badge&logo=stellar)](https://crates.io/crates/stellar_cli_wallet_lumen)
 
 ---
 
@@ -168,14 +172,15 @@ The **Lumen League** team is composed of the following members:
 
 <div align="center">
 
-| **Week** | **Challenge** | **Description** | **Start Date** | **Due Date** | **Status** |
-|:---------:|:------------:|:-------------:|:----------:|:-----------:|:----------:|
-| 🟢 **Week 1** | 🚀 **Blockchain Explorer** | Create an explorer to view transactions, accounts, and smart contracts on Stellar. | **01/30** | **02/05** | 🔄 *In Progress* |
-| 🟡 **Week 2** | 💰 **CLI Wallet** | Develop a CLI wallet for Stellar transactions. | **02/05** | **02/12** | ⏳ *Pending* |
-| 🔵 **Week 3** | 🔮 **Blockchain Oracle** | Create a **decentralized oracle** to connect Stellar with reliable external data sources. | **02/12** | **02/19** | ⏳ *Pending* |
-| 🟣 **Week 4** | ⚡ **Decentralized Exchange (DEX)** | Build a **DEX** for trading digital assets on Stellar. | **02/19** | **05/03** | ⏳ *Pending* |
+| **Week** | **Challenge** | **Description** | **Start** | **Delivery** | **Status** |
+|:--------:|:-------------:|:---------------:|:---------:|:------------:|:----------:|
+| 🟢 **Week 1** | 🚀 **Blockchain Explorer** | Create an explorer to visualize transactions, accounts, and smart contracts on Stellar. | **01/30** | **02/05** | 🎯 *Completed* |
+| 🟡 **Week 2** | 💰 **CLI Wallet** | Develop a CLI wallet for Stellar transactions. | **02/05** | **02/12** | 🔄 *In progress* |
+| 🔵 **Week 3** | 🔮 **Blockchain Oracle** | Create a **decentralized oracle** to connect Stellar to reliable external data sources. | **02/12** | **02/19** | ⏳ *Pending start* |
+| 🟣 **Week 4** | ⚡ **Decentralized Exchange (DEX)** | Build a **DEX** for digital asset trading on Stellar. | **02/19** | **05/03** | ⏳ *Pending start* |
 
 </div>
+
 
 ---
 
@@ -185,4 +190,4 @@ This project is licensed under the **MIT License**. For more details, please ref
 
 ---
 
-📢 **Stay tuned!** Updates will be posted as **Dojo Stellar** progresses. 🚀
+<p align="center">🌟 Developed during the <strong>Dojo Stellar</strong> program</p>
