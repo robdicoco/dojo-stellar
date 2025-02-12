@@ -1,5 +1,4 @@
 use reqwest::Client;
-use serde_json::json;
 use std::error::Error;
 use std::env;
 
@@ -10,42 +9,59 @@ use std::env;
 /// * `api_key` - The API key for the local RPC server.
 /// * `friendbot_url` - The URL of the Stellar Friendbot.
 /// * `local_rpc_url` - The URL of the local RPC server.
+/// * `network` - The network to fund: "L" for Local, "T" for TestNet, "B" for Both (default is "B").
 ///
 /// # Returns
 /// A `Result` indicating success or failure.
 pub async fn fund_soroban_address(
     soroban_address: &str,
-    api_key: &str,
+    api_key: Option<&str>,
     friendbot_url: &str,
     local_rpc_url: &str,
+    network: Option<&str>, // Optional parameter to select network
 ) -> Result<(), Box<dyn Error>> {
     let client = Client::new();
-    
-    // Call Friendbot
-    let friendbot_endpoint = format!("{}/?addr={}", friendbot_url, soroban_address);
-    let response = client.get(&friendbot_endpoint).send().await?;
-    
-    if !response.status().is_success() {
-        return Err(format!("Friendbot funding failed: {}", response.status()).into());
+    let network = network.unwrap_or("B"); // Default to "B" (Both)
+
+    // Helper function to handle HTTP errors
+    async fn handle_response(response: reqwest::Response, context: &str) -> Result<(), Box<dyn Error>> {
+        if response.status().is_success() {
+            Ok(())
+        } else {
+            let status = response.status();
+            let error_details = if status == 400 {
+                response.text().await.unwrap_or_else(|_| "No additional details".to_string())
+            } else {
+                "No additional details".to_string()
+            };
+            Err(format!("{} failed: {} - {}", context, status, error_details).into())
+        }
     }
 
-    // Call local RPC
-    let rpc_payload = json!({
-        "jsonrpc": "2.0",
-        "id": 1,
-        "method": "fund_account",
-        "params": {"address": soroban_address}
-    });
-    
-    let response = client
-        .post(local_rpc_url)
-        .header("api-key", api_key)
-        .json(&rpc_payload)
-        .send()
-        .await?;
+    if network == "T" || network == "B" {
+        // Call Friendbot (TestNet)
+        let friendbot_endpoint = format!("{}/?addr={}", friendbot_url, soroban_address);
+        let response = client.get(&friendbot_endpoint).send().await?;
+        handle_response(response, "Friendbot funding").await?;
+    }
 
-    if !response.status().is_success() {
-        return Err(format!("RPC funding failed: {}", response.status()).into());
+    if network == "L" || network == "B" {
+        // Call local RPC Friendbot
+        let local_friendbot_endpoint = format!(
+            "{}/friendbot?addr={}",
+            local_rpc_url.trim_end_matches('/'), // Ensure no trailing slash
+            soroban_address
+        );
+
+        let mut request = client.get(&local_friendbot_endpoint);
+
+        // Add API key header if provided
+        if let Some(key) = api_key {
+            request = request.header("api-key", key);
+        }
+
+        let response = request.send().await?;
+        handle_response(response, "Local RPC funding").await?;
     }
 
     Ok(())
@@ -92,9 +108,10 @@ mod tests {
 
         let result = fund_soroban_address(
             TEST_ADDRESS,
-            API_KEY,
+            Some(API_KEY), 
             &mock_server.uri(),
-            &mock_server.uri()
+            &mock_server.uri(),
+            None
         ).await;
 
         assert!(result.is_ok());
@@ -113,9 +130,10 @@ mod tests {
 
         let result = fund_soroban_address(
             TEST_ADDRESS,
-            API_KEY,
+            Some(API_KEY), 
             &mock_server.uri(),
-            "http://dummy-url"
+            "http://dummy-url",
+            None
         ).await;
 
         assert!(result.is_err());
@@ -142,9 +160,10 @@ mod tests {
 
         let result = fund_soroban_address(
             TEST_ADDRESS,
-            API_KEY,
+            Some(API_KEY), 
             &mock_server.uri(),
-            &mock_server.uri()
+            &mock_server.uri(),
+            None
         ).await;
 
         assert!(result.is_err());
