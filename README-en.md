@@ -122,8 +122,8 @@ The **Lumen League** team is composed of the following members:
 ### <a id="week-2-cli-wallet"></a>📌 Week 2: Creating a CLI Wallet
 
 <div align="center">
-  <a href="#">
-    <img src="https://github.com/user-attachments/assets/eab43826-6edd-4e3d-8927-241e7af77375" alt="CLI Wallet" width="80%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+  <a href="solutions/challenge2-en.md">
+    <img src="./solutions/lumen_wallet.gif" alt="CLI Wallet" width="100%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
   </a>
 </div>
 
