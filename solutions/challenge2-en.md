@@ -9,7 +9,7 @@
   <img src="./letreiro_lumen_wallet-en.gif" alt="Lumen League Logo" width="1000">
 </p>
 
-[![Status](https://img.shields.io/badge/Status-Concluded-green)](#)
+[![Status](https://img.shields.io/badge/Status-Concluded-brightgreen)](#)
 ![Stellar](https://img.shields.io/badge/Stellar-Blockchain-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
