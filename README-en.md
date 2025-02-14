@@ -132,7 +132,7 @@ The **Lumen League** team is composed of the following members:
 
 **Objective:** Develop a command-line interface (CLI) wallet to efficiently perform transactions on the Stellar network.
 
-[![Challenge 1 Details](https://img.shields.io/badge/Challenge%201-Details%20here-white?style=for-the-badge&logo=markdown)](./solutions/challenge2-en.md)
+[![Challenge 1 Details](https://img.shields.io/badge/Challenge%202-Details%20here-white?style=for-the-badge&logo=markdown)](./solutions/challenge2-en.md)
 
 [![Wallet CLI Stellar](https://img.shields.io/badge/Wallet%20CLI-Access%20Now-FFD700?style=for-the-badge&logo=stellar)](https://crates.io/crates/stellar_cli_wallet_lumen)
 
@@ -175,8 +175,8 @@ The **Lumen League** team is composed of the following members:
 | **Week** | **Challenge** | **Description** | **Start** | **Delivery** | **Status** |
 |:--------:|:-------------:|:---------------:|:---------:|:------------:|:----------:|
 | 🟢 **Week 1** | 🚀 **Blockchain Explorer** | Create an explorer to visualize transactions, accounts, and smart contracts on Stellar. | **01/30** | **02/05** | 🎯 *Completed* |
-| 🟡 **Week 2** | 💰 **CLI Wallet** | Develop a CLI wallet for Stellar transactions. | **02/05** | **02/12** | 🔄 *In progress* |
-| 🔵 **Week 3** | 🔮 **Blockchain Oracle** | Create a **decentralized oracle** to connect Stellar to reliable external data sources. | **02/12** | **02/19** | ⏳ *Pending start* |
+| 🟡 **Week 2** | 💰 **CLI Wallet** | Develop a CLI wallet for Stellar transactions. | **02/05** | **02/12** | 🎯 *Completed* |
+| 🔵 **Week 3** | 🔮 **Blockchain Oracle** | Create a **decentralized oracle** to connect Stellar to reliable external data sources. | **02/12** | **02/19** | 🔄 *In progress* |
 | 🟣 **Week 4** | ⚡ **Decentralized Exchange (DEX)** | Build a **DEX** for digital asset trading on Stellar. | **02/19** | **05/03** | ⏳ *Pending start* |
 
 </div>
