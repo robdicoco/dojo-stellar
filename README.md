@@ -132,7 +132,7 @@ O **Dojo Stellar** é estruturado em quatro desafios progressivos, cada um focad
 
 **Objetivo:** Desenvolver uma carteira de linha de comando (CLI) para realizar transações na Stellar de forma rápida e eficiente.
 
-[![Detalhes do Desafio 1](https://img.shields.io/badge/Desafio%201-Detalhes%20aqui-white?style=for-the-badge&logo=markdown)](./solutions/challenge2.md)
+[![Detalhes do Desafio 2](https://img.shields.io/badge/Desafio%202-Detalhes%20aqui-white?style=for-the-badge&logo=markdown)](./solutions/challenge2.md)
 
 [![Wallet CLI Stellar](https://img.shields.io/badge/Wallet%20CLI-Acessar%20Agora-FFD700?style=for-the-badge&logo=stellar)](https://crates.io/crates/stellar_cli_wallet_lumen)
 
@@ -175,8 +175,8 @@ O **Dojo Stellar** é estruturado em quatro desafios progressivos, cada um focad
 | **Semana** | **Desafio** | **Descrição** | **Início** | **Entrega** | **Status** |
 |:---------:|:------------:|:-------------:|:----------:|:-----------:|:----------:|
 | 🟢 **Semana 1** | 🚀 **Explorador Blockchain** | Criar um explorador para visualizar transações, contas e contratos inteligentes na Stellar. | **30/01** | **05/02** | 🎯 *Concluído* |
-| 🟡 **Semana 2** | 💰 **Carteira CLI** | Desenvolver uma carteira CLI para transações na Stellar. | **05/02** | **12/02** | 🔄 *Em andamento* |
-| 🔵 **Semana 3** | 🔮 **Oráculo Blockchain** | Criar um **oráculo descentralizado** para conectar a Stellar a fontes externas de dados confiáveis. | **12/02** | **19/02** | ⏳ *Aguardando início* |
+| 🟡 **Semana 2** | 💰 **Carteira CLI** | Desenvolver uma carteira CLI para transações na Stellar. | **05/02** | **12/02** | 🎯 *Concluído*  |
+| 🔵 **Semana 3** | 🔮 **Oráculo Blockchain** | Criar um **oráculo descentralizado** para conectar a Stellar a fontes externas de dados confiáveis. | **12/02** | **19/02** | 🔄 *Em andamento*|
 | 🟣 **Semana 4** | ⚡ **Exchange Descentralizada (DEX)** | Construir uma **DEX** para negociação de ativos digitais na Stellar. | **19/02** | **03/05** | ⏳ *Aguardando início* |
 
 </div>
