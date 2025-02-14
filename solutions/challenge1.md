@@ -9,6 +9,10 @@
   <img src="./letreiro_lumen_explorer.gif" alt="Logo da Lumen League" width="1000">
 </p>
 
+[![Status](https://img.shields.io/badge/Status-Concluído-brightgreen)](#)
+![Stellar](https://img.shields.io/badge/Stellar-Blockchain-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 ## 🔥 Desafio 1
 
 - **Criar um nó Stellar** em qualquer provedor de Cloud.
