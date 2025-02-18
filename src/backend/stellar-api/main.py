@@ -15,6 +15,17 @@ app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 
+class OracleData(BaseModel):
+    rank: int
+    price: float
+    market_cap: float
+    volume_24h: float
+    variation_24h_percent: float
+    variation_24h_absolute: float
+    std_dev_price: float
+    std_dev_market_cap: float
+
+
 # Define a model for the search input
 class SearchInput(BaseModel):
     query: str
@@ -222,6 +233,31 @@ async def get_latest_ledgers(request: Request):
         raise HTTPException(
             status_code=400, detail=f"Error fetching latest ledgers: {str(e)}"
         )
+
+
+# In-memory storage for latest and historical data
+latest_data = None
+historical_data = []
+
+
+@app.post("/update_oracle_data/")
+async def update_oracle_data(data: OracleData):
+    global latest_data
+    latest_data = data.dict()
+    historical_data.append(latest_data)
+    if len(historical_data) > 10:
+        historical_data.pop(0)
+    return {"status": "success"}
+
+
+@app.get("/latest_data/")
+async def get_latest_data():
+    return latest_data
+
+
+@app.get("/historical_data/")
+async def get_historical_data():
+    return historical_data[-10:]
 
 
 if __name__ == "__main__":
