@@ -12,4 +12,6 @@ dependencies = [
     "slowapi>=0.1.9",
     "stellar-sdk>=12.1.0",
     "uvicorn>=0.34.0",
+    "yfinance>=0.2.54",
+    "apscheduler>=3.11.0",
 ]

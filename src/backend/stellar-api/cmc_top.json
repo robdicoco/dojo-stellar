@@ -1,0 +1,144 @@
+{
+    "status": {
+        "timestamp": "2025-02-18T00:13:11.844Z",
+        "error_code": 0,
+        "error_message": null,
+        "elapsed": 171,
+        "credit_count": 1,
+        "notice": null
+    },
+    "data": [
+        {
+            "id": 1,
+            "rank": 1,
+            "name": "Bitcoin",
+            "symbol": "BTC",
+            "slug": "bitcoin",
+            "is_active": 1,
+            "status": 1,
+            "first_historical_data": "2010-07-13T00:05:00.000Z",
+            "last_historical_data": "2025-02-18T00:00:00.000Z",
+            "platform": null
+        },
+        {
+            "id": 1027,
+            "rank": 2,
+            "name": "Ethereum",
+            "symbol": "ETH",
+            "slug": "ethereum",
+            "is_active": 1,
+            "status": 1,
+            "first_historical_data": "2015-08-07T14:45:00.000Z",
+            "last_historical_data": "2025-02-18T00:00:00.000Z",
+            "platform": null
+        },
+        {
+            "id": 52,
+            "rank": 3,
+            "name": "XRP",
+            "symbol": "XRP",
+            "slug": "xrp",
+            "is_active": 1,
+            "status": 1,
+            "first_historical_data": "2013-08-04T18:50:00.000Z",
+            "last_historical_data": "2025-02-18T00:00:00.000Z",
+            "platform": null
+        },
+        {
+            "id": 825,
+            "rank": 4,
+            "name": "Tether USDt",
+            "symbol": "USDT",
+            "slug": "tether",
+            "is_active": 1,
+            "status": 1,
+            "first_historical_data": "2015-02-25T13:30:00.000Z",
+            "last_historical_data": "2025-02-18T00:00:00.000Z",
+            "platform": {
+                "id": 1,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0xdac17f958d2ee523a2206206994597c13d831ec7"
+            }
+        },
+        {
+            "id": 1839,
+            "rank": 5,
+            "name": "BNB",
+            "symbol": "BNB",
+            "slug": "bnb",
+            "is_active": 1,
+            "status": 1,
+            "first_historical_data": "2017-07-25T04:30:00.000Z",
+            "last_historical_data": "2025-02-18T00:00:00.000Z",
+            "platform": null
+        },
+        {
+            "id": 5426,
+            "rank": 6,
+            "name": "Solana",
+            "symbol": "SOL",
+            "slug": "solana",
+            "is_active": 1,
+            "status": 1,
+            "first_historical_data": "2020-04-10T04:55:00.000Z",
+            "last_historical_data": "2025-02-18T00:00:00.000Z",
+            "platform": null
+        },
+        {
+            "id": 3408,
+            "rank": 7,
+            "name": "USDC",
+            "symbol": "USDC",
+            "slug": "usd-coin",
+            "is_active": 1,
+            "status": 1,
+            "first_historical_data": "2018-10-08T18:45:00.000Z",
+            "last_historical_data": "2025-02-18T00:00:00.000Z",
+            "platform": {
+                "id": 1,
+                "name": "Ethereum",
+                "symbol": "ETH",
+                "slug": "ethereum",
+                "token_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+            }
+        },
+        {
+            "id": 74,
+            "rank": 8,
+            "name": "Dogecoin",
+            "symbol": "DOGE",
+            "slug": "dogecoin",
+            "is_active": 1,
+            "status": 1,
+            "first_historical_data": "2013-12-15T14:40:00.000Z",
+            "last_historical_data": "2025-02-18T00:00:00.000Z",
+            "platform": null
+        },
+        {
+            "id": 2010,
+            "rank": 9,
+            "name": "Cardano",
+            "symbol": "ADA",
+            "slug": "cardano",
+            "is_active": 1,
+            "status": 1,
+            "first_historical_data": "2017-10-01T20:30:00.000Z",
+            "last_historical_data": "2025-02-18T00:00:00.000Z",
+            "platform": null
+        },
+        {
+            "id": 1958,
+            "rank": 10,
+            "name": "TRON",
+            "symbol": "TRX",
+            "slug": "tron",
+            "is_active": 1,
+            "status": 1,
+            "first_historical_data": "2017-09-13T01:15:00.000Z",
+            "last_historical_data": "2025-02-18T00:00:00.000Z",
+            "platform": null
+        }
+    ]
+}
