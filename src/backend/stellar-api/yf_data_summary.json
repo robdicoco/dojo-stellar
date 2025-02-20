@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Bitcoin",
+        "symbol": "BTC-USD",
+        "price": 96818.69,
+        "market_cap": 1919586795520,
+        "volume_24h": 28580374528,
+        "volume_change_24h": 1749.1641,
+        "percent_change_24h": 1.8398736
+    },
+    {
+        "name": "Ethereum",
+        "symbol": "ETH-USD",
+        "price": 2725.2947,
+        "market_cap": 328558903296,
+        "volume_24h": 14994223104,
+        "volume_change_24h": 66.91699,
+        "percent_change_24h": 2.5172071
+    },
+    {
+        "name": "XRP",
+        "symbol": "XRP-USD",
+        "price": 2.7111843,
+        "market_cap": 156757590016,
+        "volume_24h": 5265623552,
+        "volume_change_24h": 0.18653703,
+        "percent_change_24h": 7.3886333
+    },
+    {
+        "name": "Tether USDt",
+        "symbol": "USDT-USD",
+        "price": 1.0000676,
+        "market_cap": 141789282304,
+        "volume_24h": 65723613184,
+        "volume_change_24h": 8.952618e-05,
+        "percent_change_24h": 0.00895389
+    },
+    {
+        "name": "BNB",
+        "symbol": "BNB-USD",
+        "price": 654.227,
+        "market_cap": 93212278784,
+        "volume_24h": 1933993856,
+        "volume_change_24h": 13.153442,
+        "percent_change_24h": 2.0517845
+    },
+    {
+        "name": "Solana",
+        "symbol": "SOL-USD",
+        "price": 169.54953,
+        "market_cap": 82825027584,
+        "volume_24h": 3601076224,
+        "volume_change_24h": 2.0569916,
+        "percent_change_24h": 1.2281072
+    },
+    {
+        "name": "USDC",
+        "symbol": "USDC-USD",
+        "price": 1.0000827,
+        "market_cap": 56255111168,
+        "volume_24h": 5904402432,
+        "volume_change_24h": 0.00011742115,
+        "percent_change_24h": 0.01174341
+    },
+    {
+        "name": "Dogecoin",
+        "symbol": "DOGE-USD",
+        "price": 0.25537783,
+        "market_cap": 37825957888,
+        "volume_24h": 1013414016,
+        "volume_change_24h": 0.0060489923,
+        "percent_change_24h": 2.4261136
+    },
+    {
+        "name": "Cardano",
+        "symbol": "ADA-USD",
+        "price": 0.77769595,
+        "market_cap": 27378620416,
+        "volume_24h": 691462912,
+        "volume_change_24h": 0.033533752,
+        "percent_change_24h": 4.5062475
+    },
+    {
+        "name": "TRON",
+        "symbol": "TRX-USD",
+        "price": 0.24180563,
+        "market_cap": 20816783360,
+        "volume_24h": 427896032,
+        "volume_change_24h": -1.6570091e-05,
+        "percent_change_24h": -0.00685746
+    }
+]
