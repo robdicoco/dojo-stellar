@@ -1,9 +1,9 @@
 {
     "status": {
-        "timestamp": "2025-02-18T01:19:34.107Z",
+        "timestamp": "2025-02-22T21:12:41.519Z",
         "error_code": 0,
         "error_message": null,
-        "elapsed": 27,
+        "elapsed": 29,
         "credit_count": 1,
         "notice": null
     },
@@ -13,7 +13,7 @@
             "name": "Bitcoin",
             "symbol": "BTC",
             "slug": "bitcoin",
-            "num_market_pairs": 11945,
+            "num_market_pairs": 11957,
             "date_added": "2010-07-13T00:00:00.000Z",
             "tags": [
                 {
@@ -173,8 +173,8 @@
                 }
             ],
             "max_supply": 21000000,
-            "circulating_supply": 19825784,
-            "total_supply": 19825784,
+            "circulating_supply": 19827781,
+            "total_supply": 19827781,
             "is_active": 1,
             "infinite_supply": false,
             "platform": null,
@@ -183,23 +183,23 @@
             "self_reported_circulating_supply": null,
             "self_reported_market_cap": null,
             "tvl_ratio": null,
-            "last_updated": "2025-02-18T01:18:00.000Z",
+            "last_updated": "2025-02-22T21:12:00.000Z",
             "quote": {
                 "USD": {
-                    "price": 95998.6930944606,
-                    "volume_24h": 27149855661.44612,
-                    "volume_change_24h": 63.8264,
-                    "percent_change_1h": 0.13789229,
-                    "percent_change_24h": -0.39289516,
-                    "percent_change_7d": -2.01924622,
-                    "percent_change_30d": -7.67814266,
-                    "percent_change_60d": -0.74511747,
-                    "percent_change_90d": 4.29988356,
-                    "market_cap": 1903249353573.0674,
-                    "market_cap_dominance": 59.8152,
-                    "fully_diluted_market_cap": 2015972554983.67,
+                    "price": 96559.54959448574,
+                    "volume_24h": 20932574336.50172,
+                    "volume_change_24h": -56.4464,
+                    "percent_change_1h": -0.00711337,
+                    "percent_change_24h": 1.45051533,
+                    "percent_change_7d": -1.10896681,
+                    "percent_change_30d": -6.27604123,
+                    "percent_change_60d": -1.15652557,
+                    "percent_change_90d": -0.11156236,
+                    "market_cap": 1914561602818.102,
+                    "market_cap_dominance": 59.9263,
+                    "fully_diluted_market_cap": 2027750541484.2,
                     "tvl": null,
-                    "last_updated": "2025-02-18T01:18:00.000Z"
+                    "last_updated": "2025-02-22T21:12:00.000Z"
                 }
             }
         },
@@ -208,7 +208,7 @@
             "name": "XRP",
             "symbol": "XRP",
             "slug": "xrp",
-            "num_market_pairs": 1534,
+            "num_market_pairs": 1541,
             "date_added": "2013-08-04T00:00:00.000Z",
             "tags": [
                 {
@@ -268,8 +268,8 @@
                 }
             ],
             "max_supply": 100000000000,
-            "circulating_supply": 57818864895,
-            "total_supply": 99986451428,
+            "circulating_supply": 57887806032,
+            "total_supply": 99986418374,
             "is_active": 1,
             "infinite_supply": false,
             "platform": null,
@@ -278,23 +278,23 @@
             "self_reported_circulating_supply": null,
             "self_reported_market_cap": null,
             "tvl_ratio": null,
-            "last_updated": "2025-02-18T01:19:00.000Z",
+            "last_updated": "2025-02-22T21:12:00.000Z",
             "quote": {
                 "USD": {
-                    "price": 2.647923284215714,
-                    "volume_24h": 4755192945.526625,
-                    "volume_change_24h": 38.196,
-                    "percent_change_1h": -0.20917939,
-                    "percent_change_24h": -3.87450028,
-                    "percent_change_7d": 8.26356721,
-                    "percent_change_30d": -18.61651366,
-                    "percent_change_60d": 16.03845162,
-                    "percent_change_90d": 139.52697309,
-                    "market_cap": 153099918622.39307,
-                    "market_cap_dominance": 4.8116,
-                    "fully_diluted_market_cap": 264792328421.57,
+                    "price": 2.578976891942581,
+                    "volume_24h": 2801229034.9198885,
+                    "volume_change_24h": -50.1395,
+                    "percent_change_1h": -0.13334646,
+                    "percent_change_24h": 1.56961092,
+                    "percent_change_7d": -5.84052737,
+                    "percent_change_30d": -16.63678282,
+                    "percent_change_60d": 12.05053629,
+                    "percent_change_90d": 83.40347441,
+                    "market_cap": 149291314081.78235,
+                    "market_cap_dominance": 4.6723,
+                    "fully_diluted_market_cap": 257897689194.26,
                     "tvl": null,
-                    "last_updated": "2025-02-18T01:19:00.000Z"
+                    "last_updated": "2025-02-22T21:12:00.000Z"
                 }
             }
         },
@@ -303,7 +303,7 @@
             "name": "Dogecoin",
             "symbol": "DOGE",
             "slug": "dogecoin",
-            "num_market_pairs": 1163,
+            "num_market_pairs": 1168,
             "date_added": "2013-12-15T00:00:00.000Z",
             "tags": [
                 {
@@ -342,6 +342,11 @@
                     "category": "CATEGORY"
                 },
                 {
+                    "slug": "doge-chain-ecosystem",
+                    "name": "Doge Chain Ecosystem",
+                    "category": "PLATFORM"
+                },
+                {
                     "slug": "ftx-bankruptcy-estate",
                     "name": "FTX Bankruptcy Estate ",
                     "category": "CATEGORY"
@@ -353,8 +358,8 @@
                 }
             ],
             "max_supply": null,
-            "circulating_supply": 148090216383.7052,
-            "total_supply": 148090216383.7052,
+            "circulating_supply": 148156406383.70523,
+            "total_supply": 148156406383.70523,
             "is_active": 1,
             "infinite_supply": true,
             "platform": null,
@@ -363,23 +368,23 @@
             "self_reported_circulating_supply": null,
             "self_reported_market_cap": null,
             "tvl_ratio": null,
-            "last_updated": "2025-02-18T01:19:00.000Z",
+            "last_updated": "2025-02-22T21:12:00.000Z",
             "quote": {
                 "USD": {
-                    "price": 0.25788204793830843,
-                    "volume_24h": 1373401222.3859115,
-                    "volume_change_24h": 42.239,
-                    "percent_change_1h": -0.05913185,
-                    "percent_change_24h": -3.46770104,
-                    "percent_change_7d": 0.17526652,
-                    "percent_change_30d": -35.70143385,
-                    "percent_change_60d": -17.21411584,
-                    "percent_change_90d": -33.32242601,
-                    "market_cap": 38189808280.657135,
-                    "market_cap_dominance": 1.2005,
-                    "fully_diluted_market_cap": 38189808280.66,
+                    "price": 0.24671766756913086,
+                    "volume_24h": 1136434923.845948,
+                    "volume_change_24h": -39.1079,
+                    "percent_change_1h": 0.24387342,
+                    "percent_change_24h": 3.62518031,
+                    "percent_change_7d": -8.94246513,
+                    "percent_change_30d": -28.97934455,
+                    "percent_change_60d": -25.62348279,
+                    "percent_change_90d": -41.86867114,
+                    "market_cap": 36552803018.41204,
+                    "market_cap_dominance": 1.1441,
+                    "fully_diluted_market_cap": 36552803018.41,
                     "tvl": null,
-                    "last_updated": "2025-02-18T01:19:00.000Z"
+                    "last_updated": "2025-02-22T21:12:00.000Z"
                 }
             }
         },
@@ -388,7 +393,7 @@
             "name": "Stellar",
             "symbol": "XLM",
             "slug": "stellar",
-            "num_market_pairs": 676,
+            "num_market_pairs": 681,
             "date_added": "2014-08-05T00:00:00.000Z",
             "tags": [
                 {
@@ -428,33 +433,33 @@
                 }
             ],
             "max_supply": 50001806812,
-            "circulating_supply": 30613000718.939167,
-            "total_supply": 50001786894.450165,
+            "circulating_supply": 30654072881.03875,
+            "total_supply": 50001786894.450134,
             "is_active": 1,
             "infinite_supply": false,
             "platform": null,
-            "cmc_rank": 13,
+            "cmc_rank": 14,
             "is_fiat": 0,
             "self_reported_circulating_supply": null,
             "self_reported_market_cap": null,
             "tvl_ratio": null,
-            "last_updated": "2025-02-18T01:19:00.000Z",
+            "last_updated": "2025-02-22T21:12:00.000Z",
             "quote": {
                 "USD": {
-                    "price": 0.3331789710875155,
-                    "volume_24h": 223078426.63216487,
-                    "volume_change_24h": 33.5327,
-                    "percent_change_1h": -0.11203328,
-                    "percent_change_24h": -3.8258019,
-                    "percent_change_7d": 4.94553549,
-                    "percent_change_30d": -31.4601816,
-                    "percent_change_60d": -10.36801459,
-                    "percent_change_90d": 41.3170557,
-                    "market_cap": 10199608081.437523,
-                    "market_cap_dominance": 0.3206,
-                    "fully_diluted_market_cap": 16659550546.14,
+                    "price": 0.3362522231572914,
+                    "volume_24h": 181721871.44040054,
+                    "volume_change_24h": -30.2755,
+                    "percent_change_1h": -0.28051995,
+                    "percent_change_24h": 4.10432708,
+                    "percent_change_7d": -3.40665381,
+                    "percent_change_30d": -20.74214451,
+                    "percent_change_60d": -15.62247221,
+                    "percent_change_90d": -38.51707228,
+                    "market_cap": 10307500155.074917,
+                    "market_cap_dominance": 0.3226,
+                    "fully_diluted_market_cap": 16813218702.42,
                     "tvl": null,
-                    "last_updated": "2025-02-18T01:19:00.000Z"
+                    "last_updated": "2025-02-22T21:12:00.000Z"
                 }
             }
         },
@@ -463,7 +468,7 @@
             "name": "Tether USDt",
             "symbol": "USDT",
             "slug": "tether",
-            "num_market_pairs": 116967,
+            "num_market_pairs": 117665,
             "date_added": "2015-02-25T00:00:00.000Z",
             "tags": [
                 {
@@ -835,11 +840,16 @@
                     "slug": "x-layer-ecosystem",
                     "name": "X Layer Ecosystem",
                     "category": "PLATFORM"
+                },
+                {
+                    "slug": "world-liberty-financial-portfolio",
+                    "name": "World Liberty Financial Portfolio",
+                    "category": "CATEGORY"
                 }
             ],
             "max_supply": null,
-            "circulating_supply": 141762384601.69476,
-            "total_supply": 143566824799.2221,
+            "circulating_supply": 142489546124.8272,
+            "total_supply": 144566824343.61542,
             "platform": {
                 "id": 1027,
                 "name": "Ethereum",
@@ -854,23 +864,23 @@
             "self_reported_circulating_supply": null,
             "self_reported_market_cap": null,
             "tvl_ratio": null,
-            "last_updated": "2025-02-18T01:18:00.000Z",
+            "last_updated": "2025-02-22T21:12:00.000Z",
             "quote": {
                 "USD": {
-                    "price": 0.9998731713718286,
-                    "volume_24h": 73723546355.1827,
-                    "volume_change_24h": 57.7383,
-                    "percent_change_1h": -0.00589103,
-                    "percent_change_24h": -0.0140026,
-                    "percent_change_7d": -0.03240216,
-                    "percent_change_30d": 0.08067415,
-                    "percent_change_60d": 0.05800231,
-                    "percent_change_90d": -0.13370592,
-                    "market_cap": 141744405072.9294,
-                    "market_cap_dominance": 4.4559,
-                    "fully_diluted_market_cap": 143548616415.78,
+                    "price": 1.000004852746757,
+                    "volume_24h": 62719217384.52831,
+                    "volume_change_24h": -41.2221,
+                    "percent_change_1h": 0.00058736,
+                    "percent_change_24h": 0.07239725,
+                    "percent_change_7d": -0.00572056,
+                    "percent_change_30d": -0.03769006,
+                    "percent_change_60d": 0.08485735,
+                    "percent_change_90d": -0.0578403,
+                    "market_cap": 142490237590.5101,
+                    "market_cap_dominance": 4.46,
+                    "fully_diluted_market_cap": 144567525889.8,
                     "tvl": null,
-                    "last_updated": "2025-02-18T01:18:00.000Z"
+                    "last_updated": "2025-02-22T21:12:00.000Z"
                 }
             }
         },
@@ -879,7 +889,7 @@
             "name": "Ethereum",
             "symbol": "ETH",
             "slug": "ethereum",
-            "num_market_pairs": 9933,
+            "num_market_pairs": 9948,
             "date_added": "2015-08-07T00:00:00.000Z",
             "tags": [
                 {
@@ -1096,11 +1106,16 @@
                     "slug": "starknet-ecosystem",
                     "name": "Starknet Ecosystem",
                     "category": "PLATFORM"
+                },
+                {
+                    "slug": "world-liberty-financial-portfolio",
+                    "name": "World Liberty Financial Portfolio",
+                    "category": "CATEGORY"
                 }
             ],
             "max_supply": null,
-            "circulating_supply": 120556761.34774569,
-            "total_supply": 120556761.34774569,
+            "circulating_supply": 120566328.15075894,
+            "total_supply": 120566328.15075894,
             "is_active": 1,
             "infinite_supply": true,
             "platform": null,
@@ -1109,23 +1124,23 @@
             "self_reported_circulating_supply": null,
             "self_reported_market_cap": null,
             "tvl_ratio": null,
-            "last_updated": "2025-02-18T01:18:00.000Z",
+            "last_updated": "2025-02-22T21:11:00.000Z",
             "quote": {
                 "USD": {
-                    "price": 2731.3495345870556,
-                    "volume_24h": 23380645593.17714,
-                    "volume_change_24h": 132.8593,
-                    "percent_change_1h": -0.28444087,
-                    "percent_change_24h": 2.16203495,
-                    "percent_change_7d": 1.33466739,
-                    "percent_change_30d": -18.42735232,
-                    "percent_change_60d": -19.7297302,
-                    "percent_change_90d": -12.24575634,
-                    "market_cap": 329282653998.4879,
-                    "market_cap_dominance": 10.3487,
-                    "fully_diluted_market_cap": 329282653998.49,
+                    "price": 2774.5484954799886,
+                    "volume_24h": 18853195493.6489,
+                    "volume_change_24h": -37.6891,
+                    "percent_change_1h": 0.37913208,
+                    "percent_change_24h": 5.40292693,
+                    "percent_change_7d": 3.08206903,
+                    "percent_change_30d": -14.45469746,
+                    "percent_change_60d": -19.76650723,
+                    "percent_change_90d": -16.84070217,
+                    "market_cap": 334517124376.2348,
+                    "market_cap_dominance": 10.4705,
+                    "fully_diluted_market_cap": 334517124376.23,
                     "tvl": null,
-                    "last_updated": "2025-02-18T01:18:00.000Z"
+                    "last_updated": "2025-02-22T21:11:00.000Z"
                 }
             }
         },
@@ -1134,7 +1149,7 @@
             "name": "BNB",
             "symbol": "BNB",
             "slug": "bnb",
-            "num_market_pairs": 2365,
+            "num_market_pairs": 2372,
             "date_added": "2017-07-25T00:00:00.000Z",
             "tags": [
                 {
@@ -1194,8 +1209,8 @@
                 }
             ],
             "max_supply": null,
-            "circulating_supply": 142477329.1,
-            "total_supply": 142477329.1,
+            "circulating_supply": 142476639.94,
+            "total_supply": 142476639.94,
             "is_active": 1,
             "infinite_supply": false,
             "platform": null,
@@ -1204,23 +1219,23 @@
             "self_reported_circulating_supply": null,
             "self_reported_market_cap": null,
             "tvl_ratio": null,
-            "last_updated": "2025-02-18T01:19:00.000Z",
+            "last_updated": "2025-02-22T21:12:00.000Z",
             "quote": {
                 "USD": {
-                    "price": 665.3751351560397,
-                    "volume_24h": 1930215153.209036,
-                    "volume_change_24h": -4.6238,
-                    "percent_change_1h": -0.09169117,
-                    "percent_change_24h": -1.38350813,
-                    "percent_change_7d": 7.34414827,
-                    "percent_change_30d": -6.61361748,
-                    "percent_change_60d": 0.16807771,
-                    "percent_change_90d": 8.15735565,
-                    "market_cap": 94800872106.58405,
-                    "market_cap_dominance": 2.9802,
-                    "fully_diluted_market_cap": 94800872106.58,
+                    "price": 668.3632769735445,
+                    "volume_24h": 1899588638.40948,
+                    "volume_change_24h": -0.6145,
+                    "percent_change_1h": -1.01947328,
+                    "percent_change_24h": 3.87867375,
+                    "percent_change_7d": 1.39620952,
+                    "percent_change_30d": -2.27637097,
+                    "percent_change_60d": -3.50535103,
+                    "percent_change_90d": 1.97543721,
+                    "market_cap": 95226153962.4782,
+                    "market_cap_dominance": 2.9806,
+                    "fully_diluted_market_cap": 95226153962.48,
                     "tvl": null,
-                    "last_updated": "2025-02-18T01:19:00.000Z"
+                    "last_updated": "2025-02-22T21:12:00.000Z"
                 }
             }
         },
@@ -1229,7 +1244,7 @@
             "name": "TRON",
             "symbol": "TRX",
             "slug": "tron",
-            "num_market_pairs": 1119,
+            "num_market_pairs": 1123,
             "date_added": "2017-09-13T00:00:00.000Z",
             "tags": [
                 {
@@ -1276,11 +1291,16 @@
                     "slug": "tron20-ecosystem",
                     "name": "Tron20 Ecosystem",
                     "category": "PLATFORM"
+                },
+                {
+                    "slug": "world-liberty-financial-portfolio",
+                    "name": "World Liberty Financial Portfolio",
+                    "category": "CATEGORY"
                 }
             ],
             "max_supply": null,
-            "circulating_supply": 86093342561.70056,
-            "total_supply": 86093327507.8422,
+            "circulating_supply": 86083044154.30359,
+            "total_supply": 86083063647.96567,
             "is_active": 1,
             "infinite_supply": true,
             "platform": null,
@@ -1289,23 +1309,23 @@
             "self_reported_circulating_supply": null,
             "self_reported_market_cap": null,
             "tvl_ratio": null,
-            "last_updated": "2025-02-18T01:19:00.000Z",
+            "last_updated": "2025-02-22T21:12:00.000Z",
             "quote": {
                 "USD": {
-                    "price": 0.2386652478902472,
-                    "volume_24h": 675328086.2353252,
-                    "volume_change_24h": 52.7734,
-                    "percent_change_1h": 0.14962177,
-                    "percent_change_24h": -0.90644966,
-                    "percent_change_7d": -3.56950192,
-                    "percent_change_30d": -2.08545501,
-                    "percent_change_60d": -5.03627713,
-                    "percent_change_90d": 20.18399838,
-                    "market_cap": 20547488944.188236,
-                    "market_cap_dominance": 0.6458,
-                    "fully_diluted_market_cap": 20547485351.36,
+                    "price": 0.23729000369356415,
+                    "volume_24h": 436387688.31261563,
+                    "volume_change_24h": -33.2029,
+                    "percent_change_1h": -0.52117765,
+                    "percent_change_24h": 0.30145854,
+                    "percent_change_7d": 0.25644309,
+                    "percent_change_30d": -4.83390739,
+                    "percent_change_60d": -6.96907463,
+                    "percent_change_90d": 14.94793048,
+                    "market_cap": 20426645865.327946,
+                    "market_cap_dominance": 0.6393,
+                    "fully_diluted_market_cap": 20426650490.98,
                     "tvl": null,
-                    "last_updated": "2025-02-18T01:19:00.000Z"
+                    "last_updated": "2025-02-22T21:12:00.000Z"
                 }
             }
         },
@@ -1314,7 +1334,7 @@
             "name": "Cardano",
             "symbol": "ADA",
             "slug": "cardano",
-            "num_market_pairs": 1461,
+            "num_market_pairs": 1465,
             "date_added": "2017-10-01T00:00:00.000Z",
             "tags": [
                 {
@@ -1379,8 +1399,8 @@
                 }
             ],
             "max_supply": 45000000000,
-            "circulating_supply": 35201193525.86875,
-            "total_supply": 44994975100.72033,
+            "circulating_supply": 35204786637.28696,
+            "total_supply": 44994955922.926414,
             "is_active": 1,
             "infinite_supply": false,
             "platform": null,
@@ -1389,23 +1409,23 @@
             "self_reported_circulating_supply": null,
             "self_reported_market_cap": null,
             "tvl_ratio": null,
-            "last_updated": "2025-02-18T01:18:00.000Z",
+            "last_updated": "2025-02-22T21:12:00.000Z",
             "quote": {
                 "USD": {
-                    "price": 0.7943588674282742,
-                    "volume_24h": 1037725385.141898,
-                    "volume_change_24h": 119.5809,
-                    "percent_change_1h": -1.51153698,
-                    "percent_change_24h": 1.51880206,
-                    "percent_change_7d": 7.07556749,
-                    "percent_change_30d": -30.23146894,
-                    "percent_change_60d": -10.07974484,
-                    "percent_change_90d": 2.52787553,
-                    "market_cap": 27962380221.3326,
-                    "market_cap_dominance": 0.8788,
-                    "fully_diluted_market_cap": 35746149034.27,
+                    "price": 0.7756569379101765,
+                    "volume_24h": 583500432.3203205,
+                    "volume_change_24h": -35.9739,
+                    "percent_change_1h": -0.34374772,
+                    "percent_change_24h": 2.51165503,
+                    "percent_change_7d": -0.58039972,
+                    "percent_change_30d": -20.81034591,
+                    "percent_change_60d": -15.97207341,
+                    "percent_change_90d": -22.66192373,
+                    "market_cap": 27306837002.8591,
+                    "market_cap_dominance": 0.8546,
+                    "fully_diluted_market_cap": 34904562205.96,
                     "tvl": null,
-                    "last_updated": "2025-02-18T01:18:00.000Z"
+                    "last_updated": "2025-02-22T21:12:00.000Z"
                 }
             }
         },
@@ -1414,7 +1434,7 @@
             "name": "USDC",
             "symbol": "USDC",
             "slug": "usd-coin",
-            "num_market_pairs": 25734,
+            "num_market_pairs": 25904,
             "date_added": "2018-10-08T00:00:00.000Z",
             "tags": [
                 {
@@ -1796,11 +1816,16 @@
                     "slug": "made-in-america",
                     "name": "Made in America",
                     "category": "CATEGORY"
+                },
+                {
+                    "slug": "world-liberty-financial-portfolio",
+                    "name": "World Liberty Financial Portfolio",
+                    "category": "CATEGORY"
                 }
             ],
             "max_supply": null,
-            "circulating_supply": 56468613877.49146,
-            "total_supply": 56468613877.49146,
+            "circulating_supply": 57088850007.52678,
+            "total_supply": 57088850007.52678,
             "platform": {
                 "id": 1027,
                 "name": "Ethereum",
@@ -1815,23 +1840,23 @@
             "self_reported_circulating_supply": null,
             "self_reported_market_cap": null,
             "tvl_ratio": null,
-            "last_updated": "2025-02-18T01:18:00.000Z",
+            "last_updated": "2025-02-22T21:11:00.000Z",
             "quote": {
                 "USD": {
-                    "price": 0.9998780834450173,
-                    "volume_24h": 6870682775.084362,
-                    "volume_change_24h": 59.1231,
-                    "percent_change_1h": -0.0004099,
-                    "percent_change_24h": -0.00519996,
-                    "percent_change_7d": -0.01658727,
-                    "percent_change_30d": -0.01405008,
-                    "percent_change_60d": -0.02511008,
-                    "percent_change_90d": -0.01345029,
-                    "market_cap": 56461729418.62287,
-                    "market_cap_dominance": 1.775,
-                    "fully_diluted_market_cap": 56461729418.62,
+                    "price": 0.999987807943733,
+                    "volume_24h": 6047340269.752192,
+                    "volume_change_24h": -44.4688,
+                    "percent_change_1h": 0.00365267,
+                    "percent_change_24h": 0.01852372,
+                    "percent_change_7d": 0.00337369,
+                    "percent_change_30d": -0.00192976,
+                    "percent_change_60d": -0.00041688,
+                    "percent_change_90d": 0.00364223,
+                    "market_cap": 57088153977.05527,
+                    "market_cap_dominance": 1.7868,
+                    "fully_diluted_market_cap": 57088153977.06,
                     "tvl": null,
-                    "last_updated": "2025-02-18T01:18:00.000Z"
+                    "last_updated": "2025-02-22T21:11:00.000Z"
                 }
             }
         },
@@ -1840,7 +1865,7 @@
             "name": "Solana",
             "symbol": "SOL",
             "slug": "solana",
-            "num_market_pairs": 840,
+            "num_market_pairs": 841,
             "date_added": "2020-04-10T00:00:00.000Z",
             "tags": [
                 {
@@ -1910,8 +1935,8 @@
                 }
             ],
             "max_supply": null,
-            "circulating_supply": 488389432.8278623,
-            "total_supply": 594227387.0132306,
+            "circulating_supply": 488730189.70358765,
+            "total_supply": 594682419.0808469,
             "is_active": 1,
             "infinite_supply": true,
             "platform": null,
@@ -1920,23 +1945,23 @@
             "self_reported_circulating_supply": null,
             "self_reported_market_cap": null,
             "tvl_ratio": null,
-            "last_updated": "2025-02-18T01:18:00.000Z",
+            "last_updated": "2025-02-22T21:11:00.000Z",
             "quote": {
                 "USD": {
-                    "price": 177.84723441251128,
-                    "volume_24h": 4459257599.979638,
-                    "volume_change_24h": 107.508,
-                    "percent_change_1h": 0.41773931,
-                    "percent_change_24h": -6.02830115,
-                    "percent_change_7d": -11.95107618,
-                    "percent_change_30d": -30.42852724,
-                    "percent_change_60d": -8.15371304,
-                    "percent_change_90d": -24.83779988,
-                    "market_cap": 86858709944.73027,
-                    "market_cap_dominance": 2.7305,
-                    "fully_diluted_market_cap": 105681697392.48,
+                    "price": 172.70248085398867,
+                    "volume_24h": 2254530564.9689207,
+                    "volume_change_24h": -51.3972,
+                    "percent_change_1h": 0.27947504,
+                    "percent_change_24h": 2.0331805,
+                    "percent_change_7d": -10.91002393,
+                    "percent_change_30d": -30.51045256,
+                    "percent_change_60d": -11.58304411,
+                    "percent_change_90d": -30.91948754,
+                    "market_cap": 84404916230.0501,
+                    "market_cap_dominance": 2.6419,
+                    "fully_diluted_market_cap": 102703129095.51,
                     "tvl": null,
-                    "last_updated": "2025-02-18T01:18:00.000Z"
+                    "last_updated": "2025-02-22T21:11:00.000Z"
                 }
             }
         }
