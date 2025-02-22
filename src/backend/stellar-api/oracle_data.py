@@ -1,5 +1,5 @@
-from stellar_sdk import Server, Keypair, TransactionBuilder, Network
-
+from stellar_sdk import Server, Keypair, TransactionBuilder, Network, TimeBounds
+import time
 import hashlib
 import hmac
 
@@ -16,19 +16,40 @@ oracle_account = server.load_account(oracle_keypair.public_key)
 
 # Function to update Stellar Data Entries
 def update_stellar_data_entries(data):
-    transaction = TransactionBuilder(
-        source_account=oracle_account,
-        network_passphrase=Network.TESTNET_NETWORK_PASSPHRASE,
-        base_fee=100,
-    ).add_text_memo("Oracle Update")
+    """
+    Updates the Stellar account's data entries with the signed data.
+    """
+    try:
+        # Fetch the current sequence number of the Stellar account
+        transaction = TransactionBuilder(
+            source_account=oracle_account,
+            network_passphrase=Network.TESTNET_NETWORK_PASSPHRASE,
+            base_fee=100,
+        ).add_text_memo("Oracle Update")
 
-    for key, value in data.items():
-        transaction.append_manage_data_op(key, value)
+        transaction.set_timeout(30)
 
-    transaction = transaction.build()
-    transaction.sign(oracle_keypair)
-    response = server.submit_transaction(transaction)
-    return response
+        # Add TimeBounds to the transaction
+        current_time = int(time.time())
+        transaction.add_time_bounds(
+            min_time=current_time, max_time=current_time + 300
+        )  # 5-minute window
+
+        for key, value in data.items():
+            transaction.append_manage_data_op(key, value)
+
+        # print(transaction)
+
+        transaction = transaction.build()
+        # print(transaction)
+        transaction.sign(oracle_keypair)
+        response = server.submit_transaction(transaction)
+
+        print("Transaction successful:", response)
+        return response
+    except Exception as e:
+        print("Error updating Stellar data entries:", str(e))
+        return str(e)
 
 
 def update_stellar_data_entries2(signed_data):
