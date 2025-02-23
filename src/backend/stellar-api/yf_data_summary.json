@@ -2,100 +2,100 @@
     {
         "name": "Bitcoin",
         "symbol": "BTC-USD",
-        "price": 96540.41,
-        "market_cap": 1914182041600,
-        "volume_24h": 20952649728,
-        "volume_change_24h": 1463.375,
-        "percent_change_24h": 1.539143
+        "price": 96554.14,
+        "market_cap": 1914459783168,
+        "volume_24h": 18221912064,
+        "volume_change_24h": 427.5,
+        "percent_change_24h": 0.44472054
     },
     {
         "name": "Ethereum",
         "symbol": "ETH-USD",
-        "price": 2774.5486,
-        "market_cap": 334517108736,
-        "volume_24h": 18853195776,
-        "volume_change_24h": 142.22266,
-        "percent_change_24h": 5.402927
+        "price": 2764.0894,
+        "market_cap": 333256097792,
+        "volume_24h": 16171958272,
+        "volume_change_24h": 104.72876,
+        "percent_change_24h": 3.9381163
     },
     {
         "name": "XRP",
         "symbol": "XRP-USD",
-        "price": 2.578937,
-        "market_cap": 149289009152,
-        "volume_24h": 2801784320,
-        "volume_change_24h": 0.03955674,
-        "percent_change_24h": 1.5577352
+        "price": 2.574982,
+        "market_cap": 149060059136,
+        "volume_24h": 2366279424,
+        "volume_change_24h": 0.0058181286,
+        "percent_change_24h": 0.22646658
     },
     {
         "name": "Tether USDt",
         "symbol": "USDT-USD",
-        "price": 0.9999728,
-        "market_cap": 142485667840,
-        "volume_24h": 62747795456,
-        "volume_change_24h": 0.0006580353,
-        "percent_change_24h": 0.06584548
+        "price": 1.000249,
+        "market_cap": 142525022208,
+        "volume_24h": 57109131264,
+        "volume_change_24h": 0.0006982684,
+        "percent_change_24h": 0.06985305
     },
     {
         "name": "BNB",
         "symbol": "BNB-USD",
-        "price": 668.29236,
-        "market_cap": 95216050176,
-        "volume_24h": 1899822720,
-        "volume_change_24h": 24.911194,
-        "percent_change_24h": 3.8719118
+        "price": 668.6936,
+        "market_cap": 95273213952,
+        "volume_24h": 1899177088,
+        "volume_change_24h": 22.004944,
+        "percent_change_24h": 3.4027066
     },
     {
         "name": "Solana",
         "symbol": "SOL-USD",
-        "price": 172.70248,
-        "market_cap": 84404920320,
-        "volume_24h": 2254530560,
-        "volume_change_24h": 3.441391,
-        "percent_change_24h": 2.0331805
+        "price": 172.14294,
+        "market_cap": 84131438592,
+        "volume_24h": 2013370624,
+        "volume_change_24h": 3.4023438,
+        "percent_change_24h": 2.0163229
     },
     {
         "name": "USDC",
         "symbol": "USDC-USD",
-        "price": 0.999957,
-        "market_cap": 57088569344,
-        "volume_24h": 6048838144,
-        "volume_change_24h": 2.8133392e-05,
-        "percent_change_24h": 0.00280758
+        "price": 1.000158,
+        "market_cap": 57098366976,
+        "volume_24h": 5459433472,
+        "volume_change_24h": 3.9815903e-05,
+        "percent_change_24h": 0.0039869
     },
     {
         "name": "Dogecoin",
         "symbol": "DOGE-USD",
-        "price": 0.24672192,
-        "market_cap": 36553375744,
-        "volume_24h": 1138217600,
-        "volume_change_24h": 0.008354694,
-        "percent_change_24h": 3.504973
+        "price": 0.2466605,
+        "market_cap": 36544692224,
+        "volume_24h": 927069696,
+        "volume_change_24h": 0.0073215365,
+        "percent_change_24h": 3.0590634
     },
     {
         "name": "Cardano",
         "symbol": "ADA-USD",
-        "price": 0.77561307,
-        "market_cap": 27305291776,
-        "volume_24h": 583839616,
-        "volume_change_24h": 0.018587887,
-        "percent_change_24h": 2.4553843
+        "price": 0.77404726,
+        "market_cap": 27250169856,
+        "volume_24h": 526801536,
+        "volume_change_24h": 0.012996256,
+        "percent_change_24h": 1.707677
     },
     {
         "name": "TRON",
         "symbol": "TRX-USD",
-        "price": 0.23727983,
-        "market_cap": 20425768960,
-        "volume_24h": 436580544,
-        "volume_change_24h": 0.00067180395,
-        "percent_change_24h": 0.28393263
+        "price": 0.23935461,
+        "market_cap": 20604428288,
+        "volume_24h": 423534400,
+        "volume_change_24h": 0.0017154813,
+        "percent_change_24h": 0.721884
     },
     {
         "name": "Stellar",
         "symbol": "XLM-USD",
-        "price": 0.3363027,
-        "market_cap": 10309047296,
-        "volume_24h": 181744608,
-        "volume_change_24h": 0.013355106,
-        "percent_change_24h": 4.1353765
+        "price": 0.33448008,
+        "market_cap": 10253176832,
+        "volume_24h": 169280000,
+        "volume_change_24h": 0.008677453,
+        "percent_change_24h": 2.6634057
     }
 ]
