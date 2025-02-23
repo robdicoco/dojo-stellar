@@ -9,6 +9,12 @@ import time
 
 from load_config import COINMARKETCAP_API_KEY
 
+# File to store the arrays
+HIST_FILE_NAME = "history_data_summary.json"
+LATEST_FILE_NAME = "merged_data_summary.json"
+# Maximum number of arrays to store
+MAX_STORAGE = 10
+
 
 # Off-chain data sources
 def fetch_data_from_coinmarketcap(path="", parameters=""):
@@ -52,10 +58,37 @@ def save_file(my_list, file_name):
 
 def load_file(file_name):
     # Load the list from the JSON file
-    with open(file_name, "r") as file:
-        loaded_data = json.load(file)
+    try:
+        with open(file_name, "r") as file:
+            loaded_data = json.load(file)
 
-    return loaded_data
+        return loaded_data
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+
+
+def oracle_get_history():
+    return load_file(HIST_FILE_NAME)
+
+
+def oracle_get_latest():
+    return load_file(HIST_FILE_NAME)
+
+
+def add_new_array(new_array):
+    """Add a new array to the storage, maintaining the limit."""
+    # Load existing arrays
+    arrays = load_file("merged_data_summary.json")
+
+    # Add the new array to the top of the list
+    arrays.insert(0, new_array)
+
+    # Ensure the list does not exceed the maximum storage limit
+    if len(arrays) > MAX_STORAGE:
+        arrays = arrays[:MAX_STORAGE]  # Remove the oldest array
+
+    # Save the updated list back to the file
+    save_file(arrays, HIST_FILE_NAME)
 
 
 def is_file_older_than(file_path, minutes=15):
@@ -259,7 +292,7 @@ def combine_data(cmc_data, yf_data):
 
             # Create the merged entry using cmc_item as the base
             merged_entry = {
-                "cmc_rank": cmc_item["cmc_rank"],
+                "rank": cmc_item["cmc_rank"],
                 "id": cmc_item["id"],
                 "name": cmc_item["name"],
                 "symbol": cmc_item["symbol"],
@@ -291,6 +324,8 @@ def refresh_data():
         fresh_yf_data, _ = fetch_data_from_yahoo_finance(tickers)
 
         merge_data = combine_data(fresh_cmc_data, fresh_yf_data)
+
+        add_new_array(merge_data)
     else:
         merge_data = load_file(("merged_data_summary.json"))
 

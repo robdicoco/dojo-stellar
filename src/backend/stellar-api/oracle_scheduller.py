@@ -40,29 +40,35 @@ def prepare_and_store_data(fresh_data):
     """
     Prepares the fresh_data for storage in the Stellar account and updates it.
     """
+    data_to_store = {}
     for entry in fresh_data:
         # Extract relevant fields
         symbol = entry["symbol"]
-        data_to_store = {
-            f"{symbol}_rank": str(entry["cmc_rank"]),
-            f"{symbol}_price": str(entry["price"]),
-            f"{symbol}_market_cap": str(entry["market_cap"]),
-            # f"{symbol}_vol_24h": str(entry["volume_24h"]),
-            # f"{symbol}_vol_change_24h": str(entry["volume_change_24h"]),
-            # f"{symbol}_pct_change_24h": str(entry["percent_change_24h"]),
-        }
 
-        # print(data_to_store)
+        data_to_store[f"{symbol}_rank"] = str(entry["rank"])
+        data_to_store[f"{symbol}_price"] = str(entry["price"])
+        data_to_store[f"{symbol}_market_cap"] = str(entry["market_cap"])
 
-        # Sign each piece of data
-        signed_data = {
-            key: sign_data(value, ORACLE_ACCOUNT_SECRET)
-            for key, value in data_to_store.items()
-        }
-        # print(signed_data)
+        # data_to_store = {
+        #     f"{symbol}_rank": str(entry["cmc_rank"]),
+        #     f"{symbol}_price": str(entry["price"]),
+        #     f"{symbol}_market_cap": str(entry["market_cap"]),
+        #     f"{symbol}_vol_24h": str(entry["volume_24h"]),
+        #     f"{symbol}_vol_change_24h": str(entry["volume_change_24h"]),
+        #     f"{symbol}_pct_change_24h": str(entry["percent_change_24h"]),
+        # }
 
-        # Update Stellar with the signed data
-        update_stellar_data_entries(signed_data)
+    print(data_to_store)
+
+    # Sign each piece of data
+    signed_data = {
+        key: sign_data(value, ORACLE_ACCOUNT_SECRET)
+        for key, value in data_to_store.items()
+    }
+    # print(signed_data)
+
+    # Update Stellar with the signed data
+    update_stellar_data_entries(signed_data)
 
 
 def start_scheduler(scheduler):
@@ -86,4 +92,4 @@ def start_scheduler(scheduler):
 if __name__ == "__main__":
     periodic_update()
 
-    scheduler = BackgroundScheduler()
+    # scheduler = BackgroundScheduler()
