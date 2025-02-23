@@ -6,7 +6,13 @@ from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 import re
 
-from oracle_fetch import oracle_get_history, oracle_get_latest
+from oracle_fetch import (
+    oracle_get_history,
+    oracle_get_latest,
+)
+from oracle_data import (
+    get_oracle_latest_stored_data,
+)
 
 app = FastAPI()
 stellar_server = Server(horizon_url="http://localhost:8000")
@@ -240,20 +246,44 @@ async def get_latest_ledgers(request: Request):
 # In-memory storage for latest and historical data
 
 
-@app.get("/latest_data/")
+@app.get("/latest_data")
 @limiter.limit("10/minute")
-async def get_latest_data():
-    latest_data = oracle_get_latest()
+async def get_latest_data(request: Request):
+    try:
+        latest_data = oracle_get_latest()
 
-    return latest_data
+        return latest_data
+    except Exception as e:
+        raise HTTPException(
+            status_code=400, detail=f"Error fetching latest oracle data: {str(e)}"
+        )
 
 
-@app.get("/historical_data/")
+@app.get("/historical_data")
 @limiter.limit("10/minute")
-async def get_historical_data():
-    historical_data = oracle_get_history
+async def get_historical_data(request: Request):
+    try:
+        historical_data = oracle_get_history()
 
-    return historical_data[-10:]
+        return historical_data
+    except Exception as e:
+        raise HTTPException(
+            status_code=400, detail=f"Error fetching historical oracle data: {str(e)}"
+        )
+
+
+@app.get("/get_latest_oracle_stored")
+@limiter.limit("10/minute")
+async def get_historical_data(request: Request):
+    try:
+        latest_stored_data = get_oracle_latest_stored_data()
+
+        return latest_stored_data
+    except Exception as e:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Error fetching latest stored oracle data: {str(e)}",
+        )
 
 
 if __name__ == "__main__":
