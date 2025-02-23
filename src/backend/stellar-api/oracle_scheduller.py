@@ -1,6 +1,7 @@
 from apscheduler.schedulers.background import BackgroundScheduler
-from stellar_sdk import Server, Keypair, TransactionBuilder, Network
 import time
+from stellar_sdk import Server, Keypair, TransactionBuilder, Network
+
 
 from oracle_data import update_stellar_data_entries, sign_data
 from oracle_fetch import refresh_data
@@ -13,6 +14,7 @@ oracle_keypair = Keypair.from_secret(ORACLE_ACCOUNT_SECRET)
 
 
 def periodic_update():
+    print("Update Processing")
     current_data = refresh_data()
 
     prepare_and_store_data(current_data)
@@ -60,36 +62,52 @@ def prepare_and_store_data(fresh_data):
 
     print(data_to_store)
 
-    # Sign each piece of data
-    signed_data = {
-        key: sign_data(value, ORACLE_ACCOUNT_SECRET)
-        for key, value in data_to_store.items()
-    }
-    # print(signed_data)
+    # # Sign each piece of data
+    # signed_data = {
+    #     key: sign_data(value, ORACLE_ACCOUNT_SECRET)
+    #     for key, value in data_to_store.items()
+    # }
+    # # print(signed_data)
 
     # Update Stellar with the signed data
-    update_stellar_data_entries(signed_data)
+    update_stellar_data_entries(data_to_store)
 
 
 def start_scheduler(scheduler):
     # Schedule the task to run every 12 hours
     scheduler.add_job(periodic_update, "interval", hours=12)
+
+    # Start the scheduler
     scheduler.start()
+    print("Background scheduler started.")
 
     # Keep the script running
     try:
         while True:
-            time.sleep(600)
-            print("Running backgorund scheduler")
-
-            pass
+            time.sleep(600)  # Sleep for 10 minutes
+            print("Background scheduler is running...")
     except (KeyboardInterrupt, SystemExit):
-        scheduler.shutdown()
+        # Gracefully shut down the scheduler
+        if scheduler.running:
+            print("Shutting down scheduler...")
+            scheduler.shutdown(wait=False)  # Set `wait=False` to avoid blocking
+            print("Scheduler shut down.")
+        else:
+            print("Scheduler is not running.")
 
-    scheduler.shutdown()
+    if scheduler.running:
+        print("Shutting down scheduler...")
+        scheduler.shutdown(wait=False)  # Set `wait=False` to avoid blocking
+        print("Scheduler shut down.")
+
+    print("App Closed Normal.")
 
 
 if __name__ == "__main__":
     periodic_update()
 
-    # scheduler = BackgroundScheduler()
+    # Create a scheduler with UTC as the timezone
+    # scheduler = BackgroundScheduler(timezone="UTC")
+
+    # # Start the scheduler
+    # start_scheduler(scheduler)

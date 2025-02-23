@@ -1,15 +1,18 @@
 <template>
   <div class="statistics-cards">
-    <div class="card" v-for="(card, index) in cards" :key="index">
+    <div class="card" v-for="(crypto, index) in cryptos" :key="index">
       <div class="icon">
-        <i :class="card.icon"></i>
+        <i :class="getIcon(crypto.symbol)"></i>
       </div>
       <div class="data">
-        <p class="value">{{ card.value }}</p>
-        <p class="label">{{ card.label }}</p>
+        <p class="value">{{ crypto.name }} ({{ crypto.symbol }})</p>
+        <p class="label">Rank: {{ crypto.rank }}</p>
+        <p class="label">Price: ${{ crypto.price.toFixed(2) }}</p>
+        <p class="label">Market Cap: ${{ formatNumber(crypto.market_cap) }}</p>
+        <p class="label">24h Volume: ${{ formatNumber(crypto.volume_24h) }}</p>
       </div>
-      <div class="percentage" :class="getPercentageClass(card.percentage)">
-        <span>{{ card.percentage }}%</span>
+      <div class="percentage" :class="getPercentageClass(crypto.percent_change_24h)">
+        <span>{{ crypto.percent_change_24h.toFixed(2) }}%</span>
       </div>
     </div>
   </div>
@@ -20,35 +23,44 @@ export default {
   name: 'StatisticsCards',
   data() {
     return {
-      cards: [
-        {
-          icon: 'fas fa-hashtag', // Rank icon
-          value: '13',
-          label: 'RANK',
-          percentage: '0',
-        },
-        {
-          icon: 'fas fa-dollar-sign', // Price icon
-          value: '$0.3933',
-          label: 'PRICE',
-          percentage: '0',
-        },
-        {
-          icon: 'fas fa-chart-line', // Market Cap icon
-          value: '$12,025,964,968',
-          label: 'MARKET CAP',
-          percentage: '0',
-        },
-        {
-          icon: 'fas fa-exchange-alt', // 24h Volume icon
-          value: '$268,861,566',
-          label: '24H VOLUME',
-          percentage: '0',
-        },
-      ],
+      cryptos: [], // Array to store cryptocurrency data
     }
   },
+  async created() {
+    // Fetch data from the API when the component is created
+    await this.fetchData()
+  },
   methods: {
+    async fetchData() {
+      try {
+        const response = await fetch('api/latest_data')
+        const data = await response.json()
+        this.cryptos = data[0] // Extract the first array from the response
+      } catch (error) {
+        console.error('Error fetching data:', error)
+      }
+    },
+    getIcon(symbol) {
+      // Map cryptocurrency symbols to icons (you can customize this)
+      const icons = {
+        BTC: 'fab fa-btc',
+        ETH: 'fab fa-ethereum',
+        XRP: 'fas fa-coins',
+        USDT: 'fas fa-dollar-sign',
+        BNB: 'fab fa-bnb',
+        SOL: 'fas fa-sun',
+        USDC: 'fas fa-dollar-sign',
+        DOGE: 'fab fa-dogecoin',
+        ADA: 'fab fa-ada',
+        TRX: 'fab fa-tron',
+        XLM: 'fas fa-star',
+      }
+      return icons[symbol] || 'fas fa-coins' // Default icon
+    },
+    formatNumber(number) {
+      // Format large numbers with commas
+      return number.toLocaleString()
+    },
     getPercentageClass(percentage) {
       if (percentage > 0) return 'positive'
       if (percentage < 0) return 'negative'
@@ -76,6 +88,7 @@ export default {
   width: calc(25% - 20px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  margin-bottom: 20px;
 }
 
 .card:hover {
@@ -87,7 +100,7 @@ export default {
   color: var(--text-color);
   padding: 10px;
   border-radius: 50%;
-  font-size: 18px;
+  font-size: 24px;
   margin-right: 15px;
 }
 
@@ -103,9 +116,9 @@ export default {
 }
 
 .label {
-  font-size: 12px;
-  text-transform: uppercase;
+  font-size: 14px;
   color: #aaa;
+  margin-bottom: 3px;
 }
 
 .percentage {
