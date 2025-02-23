@@ -1,25 +1,19 @@
 #![cfg(test)]
-
-use super::*;
-use soroban_sdk::{symbol_short, testutils::Address as _, vec, Env, Symbol};
-
-mod book_record {
-    soroban_sdk::contractimport!(
-        file = "../target/wasm32-unknown-unknown/release/book_record.wasm"
-    );
-}
+// use super::*;
+use crate::{BookRecord, BookRecordClient};
+use soroban_sdk::{Bytes, BytesN, Env};
 
 #[test]
 fn test_create_and_read() {
     // Initialize the environment
     let env = Env::default();
-    let contract_id = env.register_contract(None, crate::book_record::BookRecord);
-    let client = crate::book_record::BookRecordClient::new(&env, &contract_id);
+    let contract_id = env.register_contract(None, BookRecord);
+    let client = BookRecordClient::new(&env, &contract_id);
 
     // Define book details
     let id = 1;
-    let title = symbol_short!("The Great Gatsby");
-    let author = symbol_short!("F. Scott Fitzgerald");
+    let title = Bytes::from_slice(&env, "The Great Gatsby".as_bytes());
+    let author = Bytes::from_slice(&env, "F. Scott Fitzgerald".as_bytes());
     let year = 1925;
 
     // Create a new book
@@ -38,21 +32,21 @@ fn test_create_and_read() {
 fn test_update_book() {
     // Initialize the environment
     let env = Env::default();
-    let contract_id = env.register_contract(None, crate::book_record::BookRecord);
-    let client = crate::book_record::BookRecordClient::new(&env, &contract_id);
+    let contract_id = env.register_contract(None, BookRecord);
+    let client = BookRecordClient::new(&env, &contract_id);
 
     // Define initial book details
     let id = 1;
-    let title = symbol_short!("The Great Gatsby");
-    let author = symbol_short!("F. Scott Fitzgerald");
+    let title = Bytes::from_slice(&env, "The Great Gatsby".as_bytes());
+    let author = Bytes::from_slice(&env, "F. Scott Fitzgerald".as_bytes());
     let year = 1925;
 
     // Create a new book
     client.create(&id, &title, &author, &year);
 
     // Update the book details
-    let updated_title = symbol_short!("The Great Gatsby (Updated)");
-    let updated_author = symbol_short!("F. S. Fitzgerald");
+    let updated_title = Bytes::from_slice(&env, "Great Gatsby (Updated)".as_bytes());
+    let updated_author = Bytes::from_slice(&env, "F. S. Fitzgerald".as_bytes());
     let updated_year = 1926;
 
     client.update(&id, &updated_title, &updated_author, &updated_year);
@@ -70,13 +64,13 @@ fn test_update_book() {
 fn test_delete_book() {
     // Initialize the environment
     let env = Env::default();
-    let contract_id = env.register_contract(None, crate::book_record::BookRecord);
-    let client = crate::book_record::BookRecordClient::new(&env, &contract_id);
+    let contract_id = env.register_contract(None, BookRecord);
+    let client = BookRecordClient::new(&env, &contract_id);
 
     // Define book details
     let id = 1;
-    let title = symbol_short!("The Great Gatsby");
-    let author = symbol_short!("F. Scott Fitzgerald");
+    let title = Bytes::from_slice(&env, "The Great Gatsby".as_bytes());
+    let author = Bytes::from_slice(&env, "F. Scott Fitzgerald".as_bytes());
     let year = 1925;
 
     // Create a new book
@@ -97,13 +91,13 @@ fn test_delete_book() {
 fn test_create_duplicate_book() {
     // Initialize the environment
     let env = Env::default();
-    let contract_id = env.register_contract(None, crate::book_record::BookRecord);
-    let client = crate::book_record::BookRecordClient::new(&env, &contract_id);
+    let contract_id = env.register_contract(None, BookRecord);
+    let client = BookRecordClient::new(&env, &contract_id);
 
     // Define book details
     let id = 1;
-    let title = symbol_short!("The Great Gatsby");
-    let author = symbol_short!("F. Scott Fitzgerald");
+    let title = Bytes::from_slice(&env, "The Great Gatsby".as_bytes());
+    let author = Bytes::from_slice(&env, "F. Scott Fitzgerald".as_bytes());
     let year = 1925;
 
     // Create the same book twice
@@ -116,13 +110,13 @@ fn test_create_duplicate_book() {
 fn test_update_nonexistent_book() {
     // Initialize the environment
     let env = Env::default();
-    let contract_id = env.register_contract(None, crate::book_record::BookRecord);
-    let client = crate::book_record::BookRecordClient::new(&env, &contract_id);
+    let contract_id = env.register_contract(None, BookRecord);
+    let client = BookRecordClient::new(&env, &contract_id);
 
     // Attempt to update a book that doesn't exist
     let id = 1;
-    let updated_title = symbol_short!("The Great Gatsby (Updated)");
-    let updated_author = symbol_short!("F. S. Fitzgerald");
+    let updated_title = Bytes::from_slice(&env, "Great Gatsby (Updated)".as_bytes());
+    let updated_author = Bytes::from_slice(&env, "F. S. Fitzgerald".as_bytes());
     let updated_year = 1926;
 
     client.update(&id, &updated_title, &updated_author, &updated_year); // This should panic
@@ -133,8 +127,8 @@ fn test_update_nonexistent_book() {
 fn test_delete_nonexistent_book() {
     // Initialize the environment
     let env = Env::default();
-    let contract_id = env.register_contract(None, crate::book_record::BookRecord);
-    let client = crate::book_record::BookRecordClient::new(&env, &contract_id);
+    let contract_id = env.register_contract(None, BookRecord);
+    let client = BookRecordClient::new(&env, &contract_id);
 
     // Attempt to delete a book that doesn't exist
     let id = 1;
