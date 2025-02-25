@@ -1,5 +1,4 @@
 #![cfg(test)]
-// use super::*;
 use crate::{BookRecord, BookRecordClient};
 use soroban_sdk::{Env, String};
 
@@ -23,9 +22,9 @@ fn test_create_and_read() {
     let book = client.read(&id).unwrap();
 
     // Assert that the book details are correct
-    assert_eq!(book.0, title);
-    assert_eq!(book.1, author);
-    assert_eq!(book.2, year);
+    assert_eq!(book.title, title);
+    assert_eq!(book.author, author);
+    assert_eq!(book.year, year);
 }
 
 #[test]
@@ -55,9 +54,9 @@ fn test_update_book() {
     let book = client.read(&id).unwrap();
 
     // Assert that the updated details are correct
-    assert_eq!(book.0, updated_title);
-    assert_eq!(book.1, updated_author);
-    assert_eq!(book.2, updated_year);
+    assert_eq!(book.title, updated_title);
+    assert_eq!(book.author, updated_author);
+    assert_eq!(book.year, updated_year);
 }
 
 #[test]
