@@ -4,8 +4,6 @@
     "nonce": 0
   },
   "auth": [
-    [],
-    [],
     []
   ],
   "ledger": {
@@ -18,71 +16,6 @@
     "min_temp_entry_ttl": 16,
     "max_entry_ttl": 6312000,
     "ledger_entries": [
-      [
-        {
-          "contract_data": {
-            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM",
-            "key": {
-              "symbol": "BOOKS"
-            },
-            "durability": "persistent"
-          }
-        },
-        [
-          {
-            "last_modified_ledger_seq": 0,
-            "data": {
-              "contract_data": {
-                "ext": "v0",
-                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM",
-                "key": {
-                  "symbol": "BOOKS"
-                },
-                "durability": "persistent",
-                "val": {
-                  "map": [
-                    {
-                      "key": {
-                        "u32": 1
-                      },
-                      "val": {
-                        "map": [
-                          {
-                            "key": {
-                              "symbol": "author"
-                            },
-                            "val": {
-                              "bytes": "462e20532e204669747a676572616c64"
-                            }
-                          },
-                          {
-                            "key": {
-                              "symbol": "title"
-                            },
-                            "val": {
-                              "bytes": "47726561742047617473627920285570646174656429"
-                            }
-                          },
-                          {
-                            "key": {
-                              "symbol": "year"
-                            },
-                            "val": {
-                              "u32": 1926
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            },
-            "ext": "v0"
-          },
-          4095
-        ]
-      ],
       [
         {
           "contract_data": {
@@ -163,10 +96,10 @@
                   "u32": 1
                 },
                 {
-                  "bytes": "54686520477265617420476174736279"
+                  "string": "The Great Gatsby"
                 },
                 {
-                  "bytes": "462e2053636f7474204669747a676572616c64"
+                  "string": "F. Scott Fitzgerald"
                 },
                 {
                   "u32": 1925
@@ -187,56 +120,32 @@
           "v0": {
             "topics": [
               {
-                "symbol": "fn_return"
-              },
-              {
-                "symbol": "create"
-              }
-            ],
-            "data": "void"
-          }
-        }
-      },
-      "failed_call": false
-    },
-    {
-      "event": {
-        "ext": "v0",
-        "contract_id": null,
-        "type_": "diagnostic",
-        "body": {
-          "v0": {
-            "topics": [
-              {
-                "symbol": "fn_call"
-              },
-              {
-                "bytes": "0000000000000000000000000000000000000000000000000000000000000001"
-              },
-              {
-                "symbol": "update"
+                "symbol": "log"
               }
             ],
             "data": {
               "vec": [
                 {
+                  "string": "caught panic 'called `Result::unwrap()` on an `Err` value: ConversionError' from contract function 'Symbol(create)'"
+                },
+                {
                   "u32": 1
                 },
                 {
-                  "bytes": "47726561742047617473627920285570646174656429"
+                  "string": "The Great Gatsby"
                 },
                 {
-                  "bytes": "462e20532e204669747a676572616c64"
+                  "string": "F. Scott Fitzgerald"
                 },
                 {
-                  "u32": 1926
+                  "u32": 1925
                 }
               ]
             }
           }
         }
       },
-      "failed_call": false
+      "failed_call": true
     },
     {
       "event": {
@@ -247,13 +156,65 @@
           "v0": {
             "topics": [
               {
-                "symbol": "fn_return"
+                "symbol": "error"
               },
               {
-                "symbol": "update"
+                "error": {
+                  "wasm_vm": "invalid_action"
+                }
               }
             ],
-            "data": "void"
+            "data": {
+              "string": "caught error from function"
+            }
+          }
+        }
+      },
+      "failed_call": true
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": null,
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "error"
+              },
+              {
+                "error": {
+                  "wasm_vm": "invalid_action"
+                }
+              }
+            ],
+            "data": {
+              "vec": [
+                {
+                  "string": "contract call failed"
+                },
+                {
+                  "symbol": "create"
+                },
+                {
+                  "vec": [
+                    {
+                      "u32": 1
+                    },
+                    {
+                      "string": "The Great Gatsby"
+                    },
+                    {
+                      "string": "F. Scott Fitzgerald"
+                    },
+                    {
+                      "u32": 1925
+                    }
+                  ]
+                }
+              ]
+            }
           }
         }
       },
@@ -268,65 +229,16 @@
           "v0": {
             "topics": [
               {
-                "symbol": "fn_call"
+                "symbol": "error"
               },
               {
-                "bytes": "0000000000000000000000000000000000000000000000000000000000000001"
-              },
-              {
-                "symbol": "read"
-              }
-            ],
-            "data": {
-              "u32": 1
-            }
-          }
-        }
-      },
-      "failed_call": false
-    },
-    {
-      "event": {
-        "ext": "v0",
-        "contract_id": "0000000000000000000000000000000000000000000000000000000000000001",
-        "type_": "diagnostic",
-        "body": {
-          "v0": {
-            "topics": [
-              {
-                "symbol": "fn_return"
-              },
-              {
-                "symbol": "read"
-              }
-            ],
-            "data": {
-              "map": [
-                {
-                  "key": {
-                    "symbol": "author"
-                  },
-                  "val": {
-                    "bytes": "462e20532e204669747a676572616c64"
-                  }
-                },
-                {
-                  "key": {
-                    "symbol": "title"
-                  },
-                  "val": {
-                    "bytes": "47726561742047617473627920285570646174656429"
-                  }
-                },
-                {
-                  "key": {
-                    "symbol": "year"
-                  },
-                  "val": {
-                    "u32": 1926
-                  }
+                "error": {
+                  "wasm_vm": "invalid_action"
                 }
-              ]
+              }
+            ],
+            "data": {
+              "string": "escalating error to panic"
             }
           }
         }

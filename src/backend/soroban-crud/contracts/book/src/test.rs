@@ -1,7 +1,7 @@
 #![cfg(test)]
 // use super::*;
 use crate::{BookRecord, BookRecordClient};
-use soroban_sdk::{Bytes, BytesN, Env};
+use soroban_sdk::{Env, String};
 
 #[test]
 fn test_create_and_read() {
@@ -12,8 +12,8 @@ fn test_create_and_read() {
 
     // Define book details
     let id = 1;
-    let title = Bytes::from_slice(&env, "The Great Gatsby".as_bytes());
-    let author = Bytes::from_slice(&env, "F. Scott Fitzgerald".as_bytes());
+    let title = String::from_str(&env, "The Great Gatsby");
+    let author = String::from_str(&env, "F. Scott Fitzgerald");
     let year = 1925;
 
     // Create a new book
@@ -23,9 +23,9 @@ fn test_create_and_read() {
     let book = client.read(&id).unwrap();
 
     // Assert that the book details are correct
-    assert_eq!(book.title, title);
-    assert_eq!(book.author, author);
-    assert_eq!(book.year, year);
+    assert_eq!(book.0, title);
+    assert_eq!(book.1, author);
+    assert_eq!(book.2, year);
 }
 
 #[test]
@@ -37,16 +37,16 @@ fn test_update_book() {
 
     // Define initial book details
     let id = 1;
-    let title = Bytes::from_slice(&env, "The Great Gatsby".as_bytes());
-    let author = Bytes::from_slice(&env, "F. Scott Fitzgerald".as_bytes());
+    let title = String::from_str(&env, "The Great Gatsby");
+    let author = String::from_str(&env, "F. Scott Fitzgerald");
     let year = 1925;
 
     // Create a new book
     client.create(&id, &title, &author, &year);
 
     // Update the book details
-    let updated_title = Bytes::from_slice(&env, "Great Gatsby (Updated)".as_bytes());
-    let updated_author = Bytes::from_slice(&env, "F. S. Fitzgerald".as_bytes());
+    let updated_title = String::from_str(&env, "Great Gatsby (Updated)");
+    let updated_author = String::from_str(&env, "F. S. Fitzgerald");
     let updated_year = 1926;
 
     client.update(&id, &updated_title, &updated_author, &updated_year);
@@ -55,9 +55,9 @@ fn test_update_book() {
     let book = client.read(&id).unwrap();
 
     // Assert that the updated details are correct
-    assert_eq!(book.title, updated_title);
-    assert_eq!(book.author, updated_author);
-    assert_eq!(book.year, updated_year);
+    assert_eq!(book.0, updated_title);
+    assert_eq!(book.1, updated_author);
+    assert_eq!(book.2, updated_year);
 }
 
 #[test]
@@ -69,8 +69,8 @@ fn test_delete_book() {
 
     // Define book details
     let id = 1;
-    let title = Bytes::from_slice(&env, "The Great Gatsby".as_bytes());
-    let author = Bytes::from_slice(&env, "F. Scott Fitzgerald".as_bytes());
+    let title = String::from_str(&env, "The Great Gatsby");
+    let author = String::from_str(&env, "F. Scott Fitzgerald");
     let year = 1925;
 
     // Create a new book
@@ -96,8 +96,8 @@ fn test_create_duplicate_book() {
 
     // Define book details
     let id = 1;
-    let title = Bytes::from_slice(&env, "The Great Gatsby".as_bytes());
-    let author = Bytes::from_slice(&env, "F. Scott Fitzgerald".as_bytes());
+    let title = String::from_str(&env, "The Great Gatsby");
+    let author = String::from_str(&env, "F. Scott Fitzgerald");
     let year = 1925;
 
     // Create the same book twice
@@ -115,8 +115,8 @@ fn test_update_nonexistent_book() {
 
     // Attempt to update a book that doesn't exist
     let id = 1;
-    let updated_title = Bytes::from_slice(&env, "Great Gatsby (Updated)".as_bytes());
-    let updated_author = Bytes::from_slice(&env, "F. S. Fitzgerald".as_bytes());
+    let updated_title = String::from_str(&env, "Great Gatsby (Updated)");
+    let updated_author = String::from_str(&env, "F. S. Fitzgerald");
     let updated_year = 1926;
 
     client.update(&id, &updated_title, &updated_author, &updated_year); // This should panic
