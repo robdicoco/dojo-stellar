@@ -44,7 +44,11 @@ Buscar o saldo pelo endereço
 
 <img src="https://github.com/user-attachments/assets/eab43826-6edd-4e3d-8927-241e7af77375" alt="Oracle Blockchain" width="400">
 
+**⭐️ Engajamento ⭐️**
 
+| Link do Post 🔗                                                                                                                                                                                                       | Equipe 👨🏻‍💻                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
+| [Lumen Stellar CLI Wallet](https://crates.io/crates/stellar_cli_wallet_lumen) | Lumen League             |
 
 ## Semana 3: Oráculo Blockchain
 - início: 12/02  
@@ -52,7 +56,11 @@ Buscar o saldo pelo endereço
    
 <img src="https://github.com/user-attachments/assets/6e6c447b-51de-4630-a0aa-ee7c0b82f93f" alt="Oracle Blockchain" width="400">
 
+**⭐️ Engajamento ⭐️**
 
+| Link do Post 🔗                                                                                                                                                                                                       | Equipe 👨🏻‍💻                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
+| [Building a Stellar Oracle: A Step-by-Step Guide to Decentralized Data Feeds](https://medium.com/@pavusa/building-a-crud-application-on-soroban-the-stellar-smart-contract-revolution-49006c3712b3) | Lumen League             |
 
 ## Semana 4: Decentralized Exchange
 - início: 19/02  
