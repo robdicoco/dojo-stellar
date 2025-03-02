@@ -171,3 +171,4 @@ cython_debug/
 .pypirc
 
 env.json
+node_modules
