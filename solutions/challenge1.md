@@ -13,14 +13,26 @@
 ![Stellar](https://img.shields.io/badge/Stellar-Blockchain-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-## 🔥 Desafio 1
+## 📜 Descrição
 
+O **Desafio #1** consiste em criar um **Explorador Blockchain** para a rede Stellar, permitindo visualizar transações, contas e contratos inteligentes. O projeto inclui tanto a configuração de um nó Stellar quanto o desenvolvimento de um explorador que se conecta a ele. Este projeto faz parte do programa **Dojo Stellar – Semana 1**.
+
+[![Acessar Lumen League Explorer](https://img.shields.io/badge/Lumen%20Explorer-Acessar%20Agora-4287f5?style=for-the-badge&logo=stellar)](https://lumen.758206.xyz/)
+
+<div align="center">
+  <img src="./lumen_explorer.gif" alt="Interface do Explorador" width="100%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+</div>
+
+---
+
+## 🔥 Objetivos
 - **Criar um nó Stellar** em qualquer provedor de Cloud.
-
 - **Desenvolver um Explorador** que se conecte ao nó local da Stellar, que deve:
   - 🔎 Buscar um bloco pelo número.
   - 🔍 Buscar uma transação pelo hash.
   - 💰 Buscar o saldo de uma conta pelo endereço.
+
+---
 
 ## ☁️ Solução: Nó Stellar na Cloud
 
@@ -39,6 +51,8 @@
     <img src="./logo_new.png" alt="Artigo sobre Nó Stellar Local" width="300">
   </a>
 </p>
+
+---
 
 ## 🚀 Solução: Explorador Conectado ao Nó Local da Stellar
 
@@ -128,28 +142,27 @@ O backend é responsável por:
 - Utilizar uma tabela ou lista para exibir os dados dos ledgers recentes.
 - Simular os dados ou buscar informações de uma API.
 
-### 🧩 Estrutura dos Componentes
+---
 
-- **App.vue:**  
-  - Contém o layout principal, incluindo os componentes `<Header>`, `<SearchBar>`, `<MainTitle>`, `<StatisticsCards>`, `<BlockchainData>`, `<Charts>` e `<LatestLedgers>`.
+## 📅 Cronograma
+- **Início:** 30/01/2025  
+- **Entrega:** 05/02/2025  
 
-- **Header.vue:**  
-  - Inclui o logotipo, links de navegação e ícones.
+---
 
-- **SearchBar.vue:**  
-  - Campo de entrada com placeholder.
+## 🤝 Contribuição
+Contribuições para o projeto são bem-vindas! Se deseja colaborar, siga estas etapas:  
+1. Faça um **fork** do repositório.  
+2. Crie uma **branch** para sua feature ou correção de bug.  
+3. Implemente suas mudanças.  
+4. **Commit** e envie para o repositório.  
+5. Abra um **pull request**.  
 
-- **MainTitle.vue:**  
-  - Exibe o título e o subtítulo.
+---
 
-- **StatisticsCards.vue:**  
-  - Cards para exibição de ranking, preço, capitalização de mercado e volume de 24h.
+## 📄 Licença
+Este projeto está licenciado sob a **MIT License**. Consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
 
-- **BlockchainData.vue:**  
-  - Exibição de métricas da blockchain organizadas em duas colunas.
+---
 
-- **Charts.vue:**  
-  - Componentes para exibição de gráficos: Preço, Operações e Transações.
-
-- **LatestLedgers.vue:**  
-  - Tabela ou lista para exibição dos ledgers mais recentes.
+<p align="center">🌟 Desenvolvido durante o programa <strong>Dojo Stellar</strong> – Equipe <strong>Lumen League</strong> 🚀</p>

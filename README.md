@@ -22,7 +22,8 @@
    - [Semana 1: Explorador Blockchain](#semana-1-explorador-blockchain)
    - [Semana 2: Carteira CLI](#semana-2-carteira-cli)
    - [Semana 3: Oráculo Blockchain](#semana-3-oráculo-blockchain)
-   - [Semana 4: Exchange Descentralizada (DEX)](#semana-4-exchange-descentralizada-dex)
+   - [Semana 4: Desenvolvimento de um CRUD Soroban](#semana-4-crud-soroban)
+   - [Semana 5: Exchange Descentralizada (DEX)](#semana-5-dex)
 5. [Cronograma](#cronograma)
 6. [Licença](#licenca)
 
@@ -98,11 +99,11 @@ A equipe **Lumen League** é composta pelos seguintes membros:
 
 O **Dojo Stellar** é estruturado em quatro desafios progressivos, cada um focado no desenvolvimento de soluções para a rede Stellar.
 
-### <a id="semana-1-explorador-blockchain"></a>📌 Semana 1: Construção de um Explorador Blockchain
+### <a id="semana-1-explorador-blockchain"></a>📌 Semana 1: Explorador Blockchain
 
 <div align="center">
   <a href="solutions/challenge1.md">
-    <img src="./solutions/lumen_explorer.gif" alt="Blockchain Explorer" width="100%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="./solutions/letreiro_lumen_explorer.gif" alt="Lumen League Explorer" width="1000">
   </a>
 </div>
 
@@ -112,18 +113,15 @@ O **Dojo Stellar** é estruturado em quatro desafios progressivos, cada um focad
 **Objetivo:** Criar um explorador blockchain que permita visualizar transações, contas e contratos inteligentes na Stellar.
 
 
-[![Detalhes do Desafio 1](https://img.shields.io/badge/Desafio%201-Detalhes%20aqui-white?style=for-the-badge&logo=markdown)](./solutions/challenge1.md)
-
-
-[![Acessar Lumen League Explorer](https://img.shields.io/badge/Lumen%20Explorer-Acessar%20Agora-blue?style=for-the-badge&logo=stellar)](https://lumen.758206.xyz/)
+[![Detalhes do Desafio 1](https://img.shields.io/badge/Desafio%201-Documentação-4287f5?style=for-the-badge&logo=markdown)](./solutions/challenge1.md)
 
 ---
 
-### <a id="semana-2-carteira-cli"></a>📌 Semana 2: Criação de uma Carteira CLI
+### <a id="semana-2-carteira-cli"></a>📌 Semana 2: Carteira CLI
 
 <div align="center">
   <a href="solutions/challenge2.md">
-    <img src="./solutions/lumen_wallet.gif" alt="CLI Wallet" width="100%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="./solutions/letreiro_lumen_wallet.gif" alt="Lumen League Wallet" width="1000">
   </a>
 </div>
 
@@ -132,17 +130,15 @@ O **Dojo Stellar** é estruturado em quatro desafios progressivos, cada um focad
 
 **Objetivo:** Desenvolver uma carteira de linha de comando (CLI) para realizar transações na Stellar de forma rápida e eficiente.
 
-[![Detalhes do Desafio 2](https://img.shields.io/badge/Desafio%202-Detalhes%20aqui-white?style=for-the-badge&logo=markdown)](./solutions/challenge2.md)
-
-[![Wallet CLI Stellar](https://img.shields.io/badge/Wallet%20CLI-Acessar%20Agora-FFD700?style=for-the-badge&logo=stellar)](https://crates.io/crates/stellar_cli_wallet_lumen)
+[![Detalhes do Desafio 2](https://img.shields.io/badge/Desafio%202-Documentação-f5a742?style=for-the-badge&logo=markdown)](./solutions/challenge2.md)
 
 ---
 
-### <a id="semana-3-oráculo-blockchain"></a>📌 Semana 3: Implementação de um Oráculo Blockchain
+### <a id="semana-3-oráculo-blockchain"></a>📌 Semana 3: Oráculo Blockchain
 
 <div align="center">
-  <a href="#">
-    <img src="https://github.com/user-attachments/assets/6e6c447b-51de-4630-a0aa-ee7c0b82f93f" alt="Oracle Blockchain" width="80%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+  <a href="solutions/challenge3.md">
+    <img src="./solutions/letreiro_lumen_oracle.gif" alt="Lumen League Oracle" width="1000">
   </a>
 </div>
 
@@ -151,20 +147,41 @@ O **Dojo Stellar** é estruturado em quatro desafios progressivos, cada um focad
 
 **Objetivo:** Criar um **oráculo descentralizado** para conectar a Stellar a fontes externas de dados confiáveis.
 
+[![Detalhes do Desafio 3](https://img.shields.io/badge/Desafio%203-Documentação-42f584?style=for-the-badge&logo=markdown)](./solutions/challenge3.md)
+
 ---
 
-### <a id="semana-4-exchange-descentralizada-dex"></a>📌 Semana 4: Desenvolvimento de uma Exchange Descentralizada (DEX)
+### <a id="semana-4-crud-soroban"></a>📌 Semana 4: CRUD Soroban
 
 <div align="center">
-  <a href="#">
-    <img src="https://github.com/user-attachments/assets/8d85277a-445a-49db-b29e-0d36fede5f20" alt="DEX" width="80%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+  <a href="solutions/challenge4.md">
+    <img src="./solutions/letreiro_lumen_soroban.gif" alt="Lumen League CRUD Soroban" width="1000">
   </a>
 </div>
 
 **Início:** 19/02  
 **Entrega:** 03/05  
 
-**Objetivo:** Construir uma **exchange descentralizada** (DEX) sobre a blockchain Stellar, permitindo a negociação de ativos digitais.
+**Objetivo:** Criar um **CRUD** para registro de livros utilizando contratos inteligentes Soroban na Stellar.
+
+[![Detalhes do Desafio 4](https://img.shields.io/badge/Desafio%204-Documentação-d142f5?style=for-the-badge&logo=markdown)](./solutions/challenge4.md)
+
+---
+
+### <a id="semana-5-dex"></a>📌 Semana 5: Exchange Descentralizada (DEX)
+
+<div align="center">
+  <a href="solutions/challenge5.md">
+    <img src="./solutions/letreiro_lumen_dex.gif" alt="Lumen League DEX" width="1000">
+  </a>
+</div>
+
+**Início:** 05/03  
+**Entrega:** --  
+
+**Objetivo:** Construir uma exchange descentralizada (DEX) sobre a blockchain Stellar, permitindo a negociação de ativos digitais.
+
+[![Detalhes do Desafio 5](https://img.shields.io/badge/Desafio%205-Documentação-42f584?style=for-the-badge&logo=markdown)](./solutions/challenge5.md)
 
 ---
 
@@ -174,10 +191,11 @@ O **Dojo Stellar** é estruturado em quatro desafios progressivos, cada um focad
 
 | **Semana** | **Desafio** | **Descrição** | **Início** | **Entrega** | **Status** |
 |:---------:|:------------:|:-------------:|:----------:|:-----------:|:----------:|
-| 🟢 **Semana 1** | 🚀 **Explorador Blockchain** | Criar um explorador para visualizar transações, contas e contratos inteligentes na Stellar. | **30/01** | **05/02** | 🎯 *Concluído* |
-| 🟡 **Semana 2** | 💰 **Carteira CLI** | Desenvolver uma carteira CLI para transações na Stellar. | **05/02** | **12/02** | 🎯 *Concluído*  |
-| 🔵 **Semana 3** | 🔮 **Oráculo Blockchain** | Criar um **oráculo descentralizado** para conectar a Stellar a fontes externas de dados confiáveis. | **12/02** | **19/02** | 🔄 *Em andamento*|
-| 🟣 **Semana 4** | ⚡ **Exchange Descentralizada (DEX)** | Construir uma **DEX** para negociação de ativos digitais na Stellar. | **19/02** | **03/05** | ⏳ *Aguardando início* |
+| 🔵 **Semana 1** | 🚀 **Explorador Blockchain** | Criar um explorador para visualizar transações, contas e contratos inteligentes na Stellar. | **30/01** | **05/02** | 🎯 *Concluído* |
+| 🟠 **Semana 2** | 💰 **Carteira CLI** | Desenvolver uma carteira CLI para transações na Stellar. | **05/02** | **12/02** | 🎯 *Concluído*  |
+| 🟢 **Semana 3** | 🔮 **Oráculo Blockchain** | Criar um **oráculo descentralizado** para conectar a Stellar a fontes externas de dados confiáveis. | **12/02** | **19/02** | 🎯 *Concluído* |
+| 🟣 **Semana 4** | ⚡ **CRUD Soroban** | Criar um **CRUD** para registro de livros utilizando contratos inteligentes Soroban na Stellar. | **19/02** | **05/03** | 🎯 *Concluído* |
+| 🟤 **Semana 5** | 💸 **Exchange Descentralizada (DEX)** | Construir uma exchange descentralizada (DEX) sobre a blockchain Stellar, permitindo a negociação de ativos digitais. | **05/03** | **--** | 🔄 *Em andamento* |
 
 </div>
 
