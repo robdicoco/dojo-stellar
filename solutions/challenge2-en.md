@@ -14,9 +14,9 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 ## 📜 Description
-The **Lumen Stellar CLI Wallet** is a command-line interface (CLI) tool developed to facilitate interaction with the **Stellar blockchain** and the **Soroban RPC** service. It is ideal for developers and users who want to manage Stellar accounts, test smart contracts, or perform transactions in a simple and secure way. This project integrates essential features for managing wallets and transactions on the blockchain and is part of the **Dojo Stellar – Week 2** program.
+The **Lumen Stellar CLI Wallet** is a command-line interface (CLI) tool designed to facilitate interaction with the **Stellar** blockchain and the **Soroban RPC** service. It's ideal for developers and users who want to manage Stellar accounts, test smart contracts, or perform transactions in a simple and secure way. This project integrates the necessary functionalities for wallet and transaction management on the blockchain, and is part of the **Dojo Stellar – Week 2** program.
 
-[![Wallet CLI Stellar](https://img.shields.io/badge/Wallet%20CLI-Access%20Now-FFD700?style=for-the-badge&logo=stellar)](https://crates.io/crates/stellar_cli_wallet_lumen)
+[![CLI Wallet Stellar](https://img.shields.io/badge/CLI%20Wallet-Access%20Now-f5a742?style=for-the-badge&logo=stellar)](https://crates.io/crates/stellar_cli_wallet_lumen)
 
 ## 🚀 Objective
 Provide a robust and efficient command-line interface for:

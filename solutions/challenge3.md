@@ -1,4 +1,3 @@
-
 [![🇧🇷 Português](https://img.shields.io/badge/Lang-PT--BR-green)](./challenge3.md)
 [![🇺🇸 English](https://img.shields.io/badge/Lang-EN-blue)](./challenge3-en.md)
 
@@ -10,14 +9,14 @@
   <img src="./letreiro_lumen_oracle.gif" alt="Logo da Lumen League" width="1000">
 </p>
 
-[![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)](#)
+[![Status](https://img.shields.io/badge/Status-Concluído-brightgreen)](#)
 ![Stellar](https://img.shields.io/badge/Stellar-Blockchain-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 ## 📜 Descrição
 O **Desafio #3** consiste em desenvolver um **Oráculo de Preço Bitcoin/Dólar** integrado à blockchain **Stellar**, utilizando **Python** ou **JavaScript**. O sistema deve atualizar o preço a cada 12 horas e exibir os dados em um front-end que consuma as informações diretamente da blockchain Stellar. Este projeto faz parte do programa **Dojo Stellar – Semana 3**.
 
-[![Oráculo BTC/USD](https://img.shields.io/badge/Oráculo-BTC%2FUSD-FFD700?style=for-the-badge&logo=bitcoin)](#)
+[![Oráculo BTC/USD](https://img.shields.io/badge/Oráculo-BTC%2FUSD-42f584?style=for-the-badge&logo=bitcoin)](https://medium.com/@pavusa/building-a-stellar-oracle-a-step-by-step-guide-to-decentralized-data-feeds-dee992edd3ad)
 
 ---
 
