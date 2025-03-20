@@ -22,7 +22,8 @@
    - [Week 1: Blockchain Explorer](#week-1-blockchain-explorer)
    - [Week 2: CLI Wallet](#week-2-cli-wallet)
    - [Week 3: Blockchain Oracle](#week-3-blockchain-oracle)
-   - [Week 4: Decentralized Exchange (DEX)](#week-4-decentralized-exchange-dex)
+   - [Week 4: Soroban CRUD](#week-4-soroban-crud)
+   - [Week 5: Decentralized Exchange (DEX)](#week-5-dex)
 5. [Schedule](#schedule)
 6. [License](#license)
 
@@ -35,7 +36,7 @@
 </p>
 
 <p align="justify">
-The dojo’s goal is to provide a dynamic and collaborative environment where participants learn **by doing** how to develop decentralized applications using the Stellar blockchain. Throughout the event, weekly challenges will allow developers to deepen their technical knowledge, enhance their portfolios, and stand out in the blockchain and decentralized finance (**DeFi**) market.
+The dojo's goal is to provide a dynamic and collaborative environment where participants learn **by doing** how to develop decentralized applications using the Stellar blockchain. Throughout the event, weekly challenges will allow developers to deepen their technical knowledge, enhance their portfolios, and stand out in the blockchain and decentralized finance (**DeFi**) market.
 </p>
 
 ---
@@ -98,11 +99,11 @@ The **Lumen League** team is composed of the following members:
 
 **Dojo Stellar** is structured into four progressive challenges, each focusing on developing solutions for the Stellar network.
 
-### <a id="week-1-blockchain-explorer"></a>📌 Week 1: Building a Blockchain Explorer
+### <a id="week-1-blockchain-explorer"></a>📌 Week 1: Blockchain Explorer
 
 <div align="center">
   <a href="solutions/challenge1-en.md">
-    <img src="./solutions/lumen_explorer.gif" alt="Blockchain Explorer" width="100%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="./solutions/letreiro_lumen_explorer-en.gif" alt="Lumen League Explorer" width="1000">
   </a>
 </div>
 
@@ -111,19 +112,15 @@ The **Lumen League** team is composed of the following members:
 
 **Objective:** Create a blockchain explorer that allows users to view transactions, accounts, and smart contracts on the Stellar network.
 
-[![Challenge 1 Details](https://img.shields.io/badge/Challenge%201-Details%20here-white?style=for-the-badge&logo=markdown)](./solutions/challenge1-en.md)
-
-[![Access Lumen League Explorer](https://img.shields.io/badge/Lumen%20Explorer-Access%20Now-blue?style=for-the-badge&logo=stellar)](https://lumen.758206.xyz/)
-
-
+[![Challenge 1 Details](https://img.shields.io/badge/Challenge%201-Documentation-4287f5?style=for-the-badge&logo=markdown)](./solutions/challenge1-en.md)
 
 ---
 
-### <a id="week-2-cli-wallet"></a>📌 Week 2: Creating a CLI Wallet
+### <a id="week-2-cli-wallet"></a>📌 Week 2: CLI Wallet
 
 <div align="center">
   <a href="solutions/challenge2-en.md">
-    <img src="./solutions/lumen_wallet.gif" alt="CLI Wallet" width="100%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="./solutions/letreiro_lumen_wallet-en.gif" alt="Lumen League Wallet" width="1000">
   </a>
 </div>
 
@@ -132,17 +129,15 @@ The **Lumen League** team is composed of the following members:
 
 **Objective:** Develop a command-line interface (CLI) wallet to efficiently perform transactions on the Stellar network.
 
-[![Challenge 1 Details](https://img.shields.io/badge/Challenge%202-Details%20here-white?style=for-the-badge&logo=markdown)](./solutions/challenge2-en.md)
-
-[![Wallet CLI Stellar](https://img.shields.io/badge/Wallet%20CLI-Access%20Now-FFD700?style=for-the-badge&logo=stellar)](https://crates.io/crates/stellar_cli_wallet_lumen)
+[![Challenge 2 Details](https://img.shields.io/badge/Challenge%202-Documentation-f5a742?style=for-the-badge&logo=markdown)](./solutions/challenge2-en.md)
 
 ---
 
-### <a id="week-3-blockchain-oracle"></a>📌 Week 3: Implementing a Blockchain Oracle
+### <a id="week-3-blockchain-oracle"></a>📌 Week 3: Blockchain Oracle
 
 <div align="center">
-  <a href="#">
-    <img src="https://github.com/user-attachments/assets/6e6c447b-51de-4630-a0aa-ee7c0b82f93f" alt="Blockchain Oracle" width="80%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+  <a href="solutions/challenge3-en.md">
+    <img src="./solutions/letreiro_lumen_oracle-en.gif" alt="Lumen League Oracle" width="1000">
   </a>
 </div>
 
@@ -151,20 +146,41 @@ The **Lumen League** team is composed of the following members:
 
 **Objective:** Create a **decentralized oracle** to connect Stellar with reliable external data sources.
 
+[![Challenge 3 Details](https://img.shields.io/badge/Challenge%203-Documentation-42f584?style=for-the-badge&logo=markdown)](./solutions/challenge3-en.md)
+
 ---
 
-### <a id="week-4-decentralized-exchange-dex"></a>📌 Week 4: Developing a Decentralized Exchange (DEX)
+### <a id="week-4-soroban-crud"></a>📌 Week 4: Soroban CRUD
 
 <div align="center">
-  <a href="#">
-    <img src="https://github.com/user-attachments/assets/8d85277a-445a-49db-b29e-0d36fede5f20" alt="DEX" width="80%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+  <a href="solutions/challenge4-en.md">
+    <img src="./solutions/letreiro_lumen_soroban-en.gif" alt="Lumen League CRUD Soroban" width="1000">
   </a>
 </div>
 
 **Start Date:** 02/19  
 **Due Date:** 05/03  
 
-**Objective:** Build a **decentralized exchange** (DEX) on the Stellar blockchain, allowing for the trading of digital assets.
+**Objective:** Create a **CRUD** for book registry using Soroban smart contracts on Stellar.
+
+[![Challenge 4 Details](https://img.shields.io/badge/Challenge%204-Documentation-d142f5?style=for-the-badge&logo=markdown)](./solutions/challenge4-en.md)
+
+---
+
+### <a id="week-5-dex"></a>📌 Week 5: Decentralized Exchange (DEX)
+
+<div align="center">
+  <a href="solutions/challenge5-en.md">
+    <img src="./solutions/letreiro_lumen_dex-en.gif" alt="Lumen League DEX" width="1000">
+  </a>
+</div>
+
+**Start Date:** 03/05  
+**Due Date:** --  
+
+**Objective:** Create a **Decentralized Exchange (DEX)** for trading digital assets on the Stellar blockchain.
+
+[![Challenge 5 Details](https://img.shields.io/badge/Challenge%205-Documentation-42f584?style=for-the-badge&logo=markdown)](./solutions/challenge5-en.md)
 
 ---
 
@@ -174,10 +190,11 @@ The **Lumen League** team is composed of the following members:
 
 | **Week** | **Challenge** | **Description** | **Start** | **Delivery** | **Status** |
 |:--------:|:-------------:|:---------------:|:---------:|:------------:|:----------:|
-| 🟢 **Week 1** | 🚀 **Blockchain Explorer** | Create an explorer to visualize transactions, accounts, and smart contracts on Stellar. | **01/30** | **02/05** | 🎯 *Completed* |
-| 🟡 **Week 2** | 💰 **CLI Wallet** | Develop a CLI wallet for Stellar transactions. | **02/05** | **02/12** | 🎯 *Completed* |
-| 🔵 **Week 3** | 🔮 **Blockchain Oracle** | Create a **decentralized oracle** to connect Stellar to reliable external data sources. | **02/12** | **02/19** | 🔄 *In progress* |
-| 🟣 **Week 4** | ⚡ **Decentralized Exchange (DEX)** | Build a **DEX** for digital asset trading on Stellar. | **02/19** | **05/03** | ⏳ *Pending start* |
+| 🔵 **Week 1** | 🚀 **Blockchain Explorer** | Create an explorer to visualize transactions, accounts, and smart contracts on Stellar. | **01/30** | **02/05** | 🎯 *Completed* |
+| 🟠 **Week 2** | 💰 **CLI Wallet** | Develop a CLI wallet for Stellar transactions. | **02/05** | **02/12** | 🎯 *Completed* |
+| 🟢 **Week 3** | 🔮 **Blockchain Oracle** | Create a **decentralized oracle** to connect Stellar to reliable external data sources. | **02/12** | **02/19** | 🎯 *Completed* |
+| 🟣 **Week 4** | ⚡ **Soroban CRUD** | Create a **CRUD** for book registry using Soroban smart contracts on Stellar. | **02/19** | **05/03** | 🎯 *Completed* |
+| 🟤 **Week 5** | 💸 **Decentralized Exchange (DEX)** | Create a **Decentralized Exchange (DEX)** for trading digital assets on the Stellar blockchain. | **05/03** | **--** | 🔄 *In Progress* |
 
 </div>
 
