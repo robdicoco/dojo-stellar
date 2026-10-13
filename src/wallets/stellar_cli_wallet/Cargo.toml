@@ -19,7 +19,7 @@ aes = "0.7"                                          # For AES encryption
 block-modes = "0.8"                                  # For block cipher modes (e.g., CFB)
 rand = "0.8"                                         # For random number generation
 ed25519-dalek = { version = "2.1.1", features = ["rand_core"] }
-rpassword = "6.0"
+rpassword = "7.5"
 tokio = { version = "1", features = ["full"] }
 base32 = "0.4"
 crc = "2.1"
